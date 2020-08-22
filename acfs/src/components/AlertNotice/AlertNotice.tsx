@@ -1,7 +1,7 @@
 import * as React from "react";
 import Alert from "react-bootstrap/Alert";
 
-const NoticeAlert: React.FC = () => {
+const AlertNotice: React.FC = () => {
   return (
     <Alert
       key={1}
@@ -15,4 +15,4 @@ const NoticeAlert: React.FC = () => {
   );
 };
 
-export default NoticeAlert;
+export default AlertNotice;

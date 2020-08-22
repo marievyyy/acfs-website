@@ -1,0 +1,67 @@
+// HOME BANNER
+.hero-banner {
+  background-image: url(../../assets/images/h1_hero-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+
+  .hero__caption h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: var(--color-primary);
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-bottom: 29px;
+  }
+
+  .hero__caption p {
+    color: var(--color-light);
+    width: 75%;
+  }
+}
+
+// SERVICES
+.services,
+.why-donate,
+.counter {
+  padding: 5rem 0;
+}
+
+// WHY DONATE
+.why-donate {
+  background-image: url(../../assets/images/why-donate.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  img {
+    max-width: 24rem;
+  }
+
+  h1,
+  h5 {
+    color: white;
+  }
+
+  p {
+    color: var(--color-light);
+  }
+}
+
+.counter {
+  img {
+    max-width: 4rem;
+  }
+  h1 {
+    margin-bottom: 1.2rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+  }
+
+  p {
+    color: var(--color-light);
+  }
+}
