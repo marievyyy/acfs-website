@@ -11,6 +11,7 @@ import {
 import CountUp from "react-countup";
 
 import Card from "../Layout/Card/Card";
+import Post from "../Layout/Post/Post";
 
 import checklist from "../../assets/images/checklist.svg";
 import donate from "../../assets/images/donation.svg";
@@ -19,6 +20,7 @@ import volunteer2 from "../../assets/images/volunteer.svg";
 import recycle from "../../assets/images/light-bulb.svg";
 import whyDonate from "../../assets/images/undraw_deliveries.svg";
 import pc from "../../assets/images/pc.svg";
+import donors from "../../assets/images/donors.jpg";
 
 import "../../assets/scss/home.scss";
 
@@ -151,7 +153,7 @@ const Home: React.FC = () => {
                 </Col>
                 <Col lg={9}>
                   <h1>
-                    <CountUp end={350} separator="," duration={5} /> +
+                    <CountUp end={350} separator="," duration={10} /> +
                   </h1>
                   <h3>Volunteers</h3>
                   <p>
@@ -181,6 +183,31 @@ const Home: React.FC = () => {
           </Row>
         </Container>
       </div>
+      {/* announcement */}
+      <div className="announcement">
+        <Container className="announcement-container">
+          <Row className="announcement-title">
+            <Col className="text-center">
+              <h6 className="mb-4"> Our recent news</h6>
+              <h1 className="mb-5">ANNOUNCEMENT</h1>
+            </Col>
+          </Row>
+          <Row className="announcement-post">
+            <Post />
+          </Row>
+        </Container>
+      </div>
+      {/* partners */}
+      {/* <div className="partners">
+        <Container fluid>
+          <Row className="partners-title">
+            <Col lg={6} className="text-center">
+              <h1>Sponsors</h1>
+            </Col>
+            <Col lg={6} className="text-center"></Col>
+          </Row>
+        </Container>
+      </div> */}
     </div>
   );
 };

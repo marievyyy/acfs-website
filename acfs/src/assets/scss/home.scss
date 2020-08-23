@@ -22,10 +22,11 @@
   }
 }
 
-// SERVICES
 .services,
 .why-donate,
-.counter {
+.counter,
+.annoucement,
+.partners {
   padding: 5rem 0;
 }
 
@@ -64,4 +65,31 @@
   p {
     color: var(--color-light);
   }
+}
+
+// ANNOUNCEMENT
+.announcement {
+  color: white;
+  margin-bottom: 8rem;
+  .announcement-container {
+    background-color: var(--color-primary);
+    padding: 4rem 10rem;
+
+    .announcement-title {
+      h1 {
+        letter-spacing: 3px;
+      }
+      h6 {
+        color: var(--color-light);
+      }
+    }
+  }
+}
+
+// PARTNERS
+.partners {
+  background-image: url(../../assets/images/sponsors.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

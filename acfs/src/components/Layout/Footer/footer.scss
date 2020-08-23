@@ -1,0 +1,20 @@
+.footer {
+  background-image: url(../../../assets/images/footer.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+
+  img {
+    max-width: 50%;
+  }
+
+  h4 {
+    color: white;
+  }
+
+  p {
+    color: var(--color-light);
+  }
+}
