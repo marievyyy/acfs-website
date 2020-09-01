@@ -1,20 +1,36 @@
 .footer {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
   background-image: url(../../../assets/images/footer.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 5rem;
-  padding-bottom: 6rem;
 
   img {
-    max-width: 50%;
+    max-width: 45%;
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+      max-width: 20%;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 30%;
+    }
   }
 
   h4 {
     color: white;
-  }
 
+    &.mobile {
+      @media screen and (max-width: 765px) {
+        margin-top: 3rem;
+      }
+    }
+  }
   p {
     color: var(--color-light);
+    @media screen and (max-width: 765px) {
+      margin-bottom: 0;
+    }
   }
 }

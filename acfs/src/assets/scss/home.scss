@@ -14,6 +14,10 @@
     line-height: 1.2;
     text-transform: capitalize;
     margin-bottom: 29px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 40px;
+    }
   }
 
   .hero__caption p {
@@ -25,20 +29,44 @@
 .services,
 .why-donate,
 .counter,
-.annoucement,
-.partners {
+.annoucement {
   padding: 5rem 0;
+
+  .row {
+    @media screen and (max-width: 768px) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.counter {
+  background-color: #f1f1f1;
 }
 
 // WHY DONATE
 .why-donate {
-  background-image: url(../../assets/images/why-donate.png);
+  background-image: url(../../assets/images/why-donate-primary.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
+  @media screen and (max-width: 1200px) {
+    background-image: none;
+    background-color: var(--color-primary);
+  }
+
+  .offset-xl-6 {
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      margin-left: 45%;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    background-position: right center;
+  }
+
   img {
-    max-width: 24rem;
+    max-width: 1.5rem;
   }
 
   h1,
@@ -52,6 +80,10 @@
 }
 
 .counter {
+  @media screen and (max-width: 991px) {
+    text-align: center;
+  }
+
   img {
     max-width: 4rem;
   }
@@ -60,20 +92,35 @@
     font-size: 3.5rem;
     font-weight: bold;
     color: var(--color-secondary);
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      font-size: 3rem;
+    }
   }
 
   p {
     color: var(--color-light);
+    @media screen and (max-width: 991px) {
+      margin-bottom: 4.5rem;
+    }
   }
 }
 
 // ANNOUNCEMENT
 .announcement {
   color: white;
-  margin-bottom: 8rem;
+  margin: 5rem 0;
   .announcement-container {
     background-color: var(--color-primary);
     padding: 4rem 10rem;
+
+    @media (min-width: 576px) and (max-width: 991px) {
+      padding: 4rem;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding: 4rem 3rem;
+    }
 
     .announcement-title {
       h1 {
@@ -84,12 +131,126 @@
       }
     }
   }
+
+  .more {
+    justify-content: flex-end;
+
+    @media screen and (max-width: 992px) {
+      justify-content: center;
+    }
+
+    button {
+      border-radius: 0;
+      padding: 0.5rem 1.5rem;
+      background-color: #f1f1f1;
+      color: var(--color-primary);
+      outline: none;
+      border: 0;
+
+      &:hover {
+        color: white;
+        outline: 0;
+        box-shadow: none;
+        background-color: var(--color-secondary);
+      }
+    }
+  }
 }
 
 // PARTNERS
 .partners {
-  background-image: url(../../assets/images/sponsors.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  padding: 0;
+  background-color: #f1f1f1;
+
+  .partners-container {
+    padding: 5rem 6rem 1rem;
+  }
+
+  .partners-title {
+    margin-bottom: 0.5rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+
+    p {
+      color: var(--color-light);
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .slick-slider {
+    width: 100%;
+
+    .slick-prev:before,
+    .slick-next:before {
+      font-family: "slick";
+      font-size: 25px;
+      line-height: 1;
+      opacity: 1;
+      color: var(--color-primary);
+    }
+
+    .slick-track {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slick-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1.8rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .partners-list {
+    background-color: white;
+    padding: 3rem 0;
+    border-radius: 10px;
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      &.small-img {
+        img {
+          max-width: 25%;
+        }
+      }
+
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+// Contributors
+.contributors {
+  padding: 1.5rem 0;
+
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  img {
+    max-width: 45%;
+  }
+
+  .s-100 {
+    max-width: 100% !important;
+  }
 }

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import acfslogo from "../../../assets/images/acfs-4.png";
+import acfsLogo from "../../../assets/images/acfs-4.png";
 
 import "./footer.scss";
 
@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
       <Container>
         <Row>
           <Col xl={4}>
-            <img src={acfslogo} />
+            <img className="d-block mb-5" src={acfsLogo} />
           </Col>
-          <Col xl={4}>
+          <Col xl={4} md={6}>
             <h4 className="mb-4">Edmonton</h4>
             <p>
               8415 45 Street NW, Building B <br />
@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
             <p>Supervisors: Dave Fladager and Ivy Porras</p>
             <p>Pick-Up and Drop-Off Time : 08:00 - 15:30</p>
           </Col>
-          <Col xl={4}>
-            <h4 className="mb-4">Calgary</h4>
+          <Col xl={4} md={6}>
+            <h4 className="mb-4 mobile">Calgary</h4>
             <p>
               Located at CBE Highfield <br /> 3610 9 St SE <br />
               Calgary, AB T2G 3C5

@@ -2,13 +2,12 @@ import * as React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHeart,
-  faThumbsUp,
-  faTrashAlt,
-} from "@fortawesome/free-regular-svg-icons";
+import Button from "react-bootstrap/Button";
 import CountUp from "react-countup";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Card from "../Layout/Card/Card";
 import Post from "../Layout/Post/Post";
@@ -18,11 +17,76 @@ import donate from "../../assets/images/donation.svg";
 import volunteer from "../../assets/images/group.svg";
 import volunteer2 from "../../assets/images/volunteer.svg";
 import recycle from "../../assets/images/light-bulb.svg";
+import heart from "../../assets/images/heart-yellow.svg";
+import work from "../../assets/images/work-yellow.svg";
+import ecoFriendly from "../../assets/images/eco-friendly-yellow.svg";
 import whyDonate from "../../assets/images/undraw_deliveries.svg";
 import pc from "../../assets/images/pc.svg";
 import donors from "../../assets/images/donors.jpg";
+import ISEDlogo from "../../assets/images/ised.png";
+import CanadaLogo from "../../assets/images/Canada.svg";
+import AlbertaLogo from "../../assets/images/alberta.png";
+
+// partners list
+import alberta from "../../assets/images/alberta-logo.png";
+import ama from "../../assets/images/ama.png";
+import atb from "../../assets/images/atb-financial.png";
+import canadaGov from "../../assets/images/canada-gov-logo.png";
+import csc from "../../assets/images/csc.png";
+import google from "../../assets/images/google.png";
+import huskyEnergy from "../../assets/images/husky-energy.png";
+import imperialOil from "../../assets/images/imperial-oil.png";
+import ised from "../../assets/images/ised-logo.png";
+import mawer from "../../assets/images/mawer.png";
+import ntl from "../../assets/images/ntl.png";
+import rcmp from "../../assets/images/rcmp.png";
+import scri from "../../assets/images/scri.png";
+import statistic from "../../assets/images/statistic-canada.png";
+import strathcona from "../../assets/images/strathcona.jpg";
+import telus from "../../assets/images/telus.png";
+import transalta from "../../assets/images/transalta.png";
+import wipro from "../../assets/images/wipro.png";
 
 import "../../assets/scss/home.scss";
+
+const settings = {
+  autoplay: false,
+  autoPlaySpeed: 200,
+  arrows: true,
+  dots: false,
+  infinite: true,
+  mobileFirst: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  // variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const Home: React.FC = () => {
   return (
@@ -31,7 +95,7 @@ const Home: React.FC = () => {
       <div className="hero-banner d-flex align-items-center justify-content-center">
         <Container>
           <Row>
-            <Col xl={6} lg={6} md={8} sm={10}>
+            <Col xl={6} lg={6} md={8} sm={12}>
               <div className="hero__caption">
                 <h1 data-animation="fadeInUp" data-delay=".6s">
                   Providing Essential <br />
@@ -83,45 +147,43 @@ const Home: React.FC = () => {
       <div className="why-donate d-flex align-items-center justify-content-center">
         <Container>
           <Row>
-            <Col xl={{ span: 7, offset: 6 }} lg={6} md={8} sm={10}>
+            <Col xl={{ span: 7, offset: 6 }} md={12}>
               <h1 className="mb-5">Why donate your old computer?</h1>
               <div className="purpose-1 mb-5">
                 <div className="d-flex align-items-center mb-4">
-                  <FontAwesomeIcon color="white" icon={faHeart} size="lg" />
-                  <h5 className="pl-3 mb-0">Help Albertans</h5>
+                  <img src={heart} alt="heart" />
+                  <h5 className="pl-3 mb-0">Digital Access for Albertans</h5>
                 </div>
                 <p>
-                  Donating your old computers helps low-income families,
-                  non-profit organizations and schools. Serving our community
-                  helps us bridge the digital divide and plans to meet social
-                  distancing requirements in order to slow the spread of
-                  COVID-19.
+                  Donating your old computers helps schools, libraries,
+                  not-profit organizations, Indigenous communities, new
+                  Canadians, low-income Canadians and seniors. Serving our
+                  community helps us bridge the digital divide.
                 </p>
               </div>
               <div className="purpose-2 mb-5">
                 <div className="d-flex align-items-center mb-4">
-                  <FontAwesomeIcon color="white" icon={faThumbsUp} size="lg" />
-                  <h5 className="pl-3 mb-0">Make a difference</h5>
+                  <img src={work} alt="intern" />
+                  <h5 className="pl-3 mb-0">
+                    Training for the skills of tomorrow
+                  </h5>
                 </div>
                 <p>
-                  Donating your old computers helps low-income families,
-                  non-profit organizations and schools. Serving our community
-                  helps us bridge the digital divide and plans to meet social
-                  distancing requirements in order to slow the spread of
-                  COVID-19.
+                  The Technical Work Experience Program (TWEP) employs young
+                  Canadians giving them hands-on experience and the digital
+                  skills needed to enter the workplace. This program exist
+                  because of your generous donations.
                 </p>
               </div>
               <div className="purpose-3">
                 <div className="d-flex align-items-center mb-4">
-                  <FontAwesomeIcon color="white" icon={faTrashAlt} size="lg" />
-                  <h5 className="pl-3 mb-0">Environmental friendly</h5>
+                  <img src={ecoFriendly} alt="eco friendly" />
+                  <h5 className="pl-3 mb-0">Keeping the future green</h5>
                 </div>
                 <p className="mb-0">
-                  Donating your old computers helps low-income families,
-                  non-profit organizations and schools. Serving our community
-                  helps us bridge the digital divide and plans to meet social
-                  distancing requirements in order to slow the spread of
-                  COVID-19.
+                  Providing Canadians with access to computers also has a
+                  positive impact on the environment. Refurbishing equipment
+                  saves 20x more energy than recycling.
                 </p>
               </div>
             </Col>
@@ -194,20 +256,119 @@ const Home: React.FC = () => {
           </Row>
           <Row className="announcement-post">
             <Post />
+            <Col>
+              <div className="d-flex more">
+                <Button size="sm">More</Button>
+              </div>
+            </Col>
           </Row>
         </Container>
       </div>
       {/* partners */}
-      {/* <div className="partners">
-        <Container fluid>
+      <div className="partners">
+        <Container className="partners-container">
           <Row className="partners-title">
-            <Col lg={6} className="text-center">
-              <h1>Sponsors</h1>
+            <Col xs={12} className="text-center">
+              <h1 className="mb-5">Partners</h1>
+              <p>
+                The Computers for Schools Program could not exist without the
+                support of a large number of government departments (Federal,
+                Provincial and Municipal), private corporations, varied
+                organizations, and individuals. We gratefully acknowledge the
+                following supporters:
+              </p>
             </Col>
-            <Col lg={6} className="text-center"></Col>
+          </Row>
+          <Row>
+            <Slider {...settings}>
+              <div>
+                <img src={alberta} />
+              </div>
+              <div>
+                <img src={ama} />
+              </div>
+              <div>
+                <img src={atb} />
+              </div>
+              <div>
+                <img src={canadaGov} />
+              </div>
+              <div>
+                <img src={csc} />
+              </div>
+              <div>
+                <img src={google} />
+              </div>
+              <div>
+                <img src={ntl} />
+              </div>
+              <div>
+                <img src={huskyEnergy} />
+              </div>
+              <div>
+                <img src={imperialOil} />
+              </div>
+              <div className="ised">
+                <img src={ised} />
+              </div>
+              <div>
+                <img src={mawer} />
+              </div>
+              <div>
+                <img src={rcmp} />
+              </div>
+              <div>
+                <img src={scri} />
+              </div>
+              <div>
+                <img src={statistic} />
+              </div>
+              <div>
+                <img src={strathcona} />
+              </div>
+              <div>
+                <img src={telus} />
+              </div>
+              <div>
+                <img src={transalta} />
+              </div>
+              <div>
+                <img src={wipro} />
+              </div>
+            </Slider>
           </Row>
         </Container>
-      </div> */}
+      </div>
+      {/* contributors */}
+      <Container className="contributors">
+        <Row>
+          <Col
+            md={3}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <h4>Contributors</h4>
+          </Col>
+          <Col md={3}>
+            <a href="http://www.ic.gc.ca/eic/site/cfs-ope.nsf/eng/home">
+              <img className="s-100" src={ISEDlogo} alt="ISED" />
+            </a>
+          </Col>
+          <Col
+            md={3}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <img src={CanadaLogo} alt="Canada" />
+          </Col>
+          <Col
+            md={3}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <a href="https://www.alberta.ca/index.aspx" className="text-center">
+              <img src={AlbertaLogo} alt="Alberta" />
+            </a>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
