@@ -1,7 +1,5 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -13,7 +11,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import "./navigation.scss";
+import "../../assets/scss/navigation.scss";
 import ACFSlogo from "../../assets/images/acfs-3.png";
 
 const Navigation: React.FC = () => {

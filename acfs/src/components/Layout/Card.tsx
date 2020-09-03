@@ -1,6 +1,6 @@
 import * as React from "react";
 import Col from "react-bootstrap/Col";
-import "./card.scss";
+import "../../assets/scss/card.scss";
 
 interface CardProps {
   href?: string;

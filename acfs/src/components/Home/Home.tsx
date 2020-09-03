@@ -5,26 +5,27 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import CountUp from "react-countup";
 import Slider from "react-slick";
+import { ReactComponent as RightArrow } from "../../assets/images/arrow-right.svg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Card from "../Layout/Card/Card";
-import Post from "../Layout/Post/Post";
+import Card from "../Layout/Card";
+import Post from "../Layout/Post";
 
+import heroImage from "../../assets/images/slider-5.jpg";
 import checklist from "../../assets/images/checklist.svg";
 import donate from "../../assets/images/donation.svg";
 import volunteer from "../../assets/images/group.svg";
-import volunteer2 from "../../assets/images/volunteer.svg";
 import recycle from "../../assets/images/light-bulb.svg";
+
+import volunteer2 from "../../assets/images/volunteer.svg";
 import heart from "../../assets/images/heart-yellow.svg";
 import work from "../../assets/images/work-yellow.svg";
 import ecoFriendly from "../../assets/images/eco-friendly-yellow.svg";
-import whyDonate from "../../assets/images/undraw_deliveries.svg";
 import pc from "../../assets/images/pc.svg";
-import donors from "../../assets/images/donors.jpg";
 import ISEDlogo from "../../assets/images/ised.png";
-import CanadaLogo from "../../assets/images/Canada.svg";
+import CanadaLogo from "../../assets/images/canada.png";
 import AlbertaLogo from "../../assets/images/alberta.png";
 
 // partners list
@@ -50,7 +51,7 @@ import wipro from "../../assets/images/wipro.png";
 import "../../assets/scss/home.scss";
 
 const settings = {
-  autoplay: false,
+  autoplay: true,
   autoPlaySpeed: 200,
   arrows: true,
   dots: false,
@@ -67,7 +68,6 @@ const settings = {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true,
       },
     },
     {
@@ -93,22 +93,30 @@ const Home: React.FC = () => {
     <div className="home">
       {/* home banner */}
       <div className="hero-banner d-flex align-items-center justify-content-center">
-        <Container>
+        <Container className="hero__container">
           <Row>
             <Col xl={6} lg={6} md={8} sm={12}>
               <div className="hero__caption">
-                <h1 data-animation="fadeInUp" data-delay=".6s">
+                <h1>
                   Providing Essential <br />
                   Learning Tools
                 </h1>
-                <p data-animation="fadeInUp" data-delay=".8s">
+                <p>
                   In today's digital-learning environment, computers are a
                   necessity. ACFS provides about 10,000 computers per year to
                   schools, libraries, not-for-profit organizations and
                   Indigenous communities throughout Alberta.
                 </p>
+                <div className="btn-row">
+                  <a href="/" className="d-flex align-items-center">
+                    Apply now <RightArrow />
+                  </a>
+                </div>
               </div>
             </Col>
+            <div className="hero__image">
+              <img src={heroImage} />
+            </div>
           </Row>
         </Container>
       </div>
@@ -348,16 +356,21 @@ const Home: React.FC = () => {
           >
             <h4>Contributors</h4>
           </Col>
-          <Col md={3}>
+          <Col
+            md={3}
+            className="d-flex align-items-center justify-content-center"
+          >
             <a href="http://www.ic.gc.ca/eic/site/cfs-ope.nsf/eng/home">
-              <img className="s-100" src={ISEDlogo} alt="ISED" />
+              <img src={ISEDlogo} alt="ISED" />
             </a>
           </Col>
           <Col
             md={3}
             className="d-flex align-items-center justify-content-center"
           >
-            <img src={CanadaLogo} alt="Canada" />
+            <a href="http://www.ic.gc.ca/eic/site/cfs-ope.nsf/eng/home">
+              <img src={CanadaLogo} alt="Canada" />
+            </a>
           </Col>
           <Col
             md={3}

@@ -1,23 +1,25 @@
+@import "variables.scss";
+@import "breakpoint.scss";
+
 // Main Navigation
 
 .header-sticky {
   top: 0;
-  background-color: var(--color-primary);
+  background-color: $darkBlue;
   z-index: 100;
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 
   .navbar {
     .navbar-brand img {
-      max-width: 200px;
+      max-width: 190px;
 
-      @media screen and (max-width: 1080px) {
+      @include media("<=desktop") {
         max-width: 155px;
       }
 
-      @media screen and (max-width: 575px) {
+      @include media("<=tablet") {
         max-width: 145px;
       }
     }
@@ -31,7 +33,7 @@
 
     .navbar-nav {
       a {
-        color: var(--color-light);
+        color: $lightBlue;
         font-weight: 400;
         padding: 2.5rem 1.5rem;
         font-size: 16px;
@@ -42,10 +44,10 @@
         &.active,
         &:focus,
         &:hover {
-          color: var(--color-secondary);
+          color: $yellow;
         }
 
-        @media (min-width: 992px) and (max-width: 1112px) {
+        @include media(">=tablet", "<=desktop") {
           padding: 2.5rem 1rem;
         }
       }
@@ -57,7 +59,7 @@
 
         .dropdown-toggle {
           &:after {
-            @media only screen and (min-width: 991px) {
+            @include media(">=tablet") {
               display: none;
             }
           }
@@ -67,11 +69,11 @@
           padding: 17px 0;
           border-radius: 0;
           border: 0;
-          border-top: 5px solid var(--color-secondary);
+          border-top: 5px solid $yellow;
           background: rgba(0, 12, 32, 0.8);
           box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
 
-          @media only screen and (max-width: 990px) {
+          @include media("<990px") {
             border: 0;
             padding: 0;
             box-shadow: none;
@@ -81,7 +83,7 @@
           .dropdown-item {
             padding: 6px 10px !important;
             font-size: 16px;
-            color: #f1f1f1;
+            color: $lightGray;
             -webkit-transition: 0.3s;
             -moz-transition: 0.3s;
             -o-transition: 0.3s;
@@ -90,20 +92,20 @@
             &.active,
             &:focus,
             &:hover {
-              color: var(--color-secondary);
+              color: $yellow !important;
               padding-left: 20px !important;
               background-color: transparent;
             }
 
-            @media only screen and (max-width: 990px) {
-              color: var(--color-light) !important;
+            @include media("<990px") {
+              color: $lightBlue !important;
               padding: 0.75rem 0.5rem 0.75rem 0 !important;
             }
           }
         }
       }
       .header-social {
-        @media screen and (max-width: 991px) {
+        @include media("<992px") {
           display: none !important;
         }
         > ul {
@@ -114,14 +116,14 @@
             display: inline-block;
 
             a {
-              color: var(--color-light);
+              color: $lightBlue;
               font-size: 14px;
               padding: 2.5rem 1rem;
 
               &:hover,
               :focus,
               :active {
-                color: var(--color-secondary);
+                color: $yellow;
               }
             }
           }
@@ -135,9 +137,9 @@
       padding: 1rem 3rem;
       font-size: 16px;
       margin-left: 2rem;
-      color: var(--color-primary);
-      background-color: var(--color-secondary);
-      box-shadow: inset 0 0 0 0 var(--color-primary);
+      color: $darkBlue;
+      background-color: $yellow;
+      box-shadow: inset 0 0 0 0 $darkBlue;
       -webkit-transition: all ease 0.8s;
       -moz-transition: all ease 0.8s;
       transition: all ease 0.8s;
@@ -146,14 +148,14 @@
       :active {
         box-shadow: inset 200px 0 0 0 #e0e0e0 !important;
         border: 0;
-        color: var(--color-primary);
-        background-color: var(--color-secondary);
+        color: $darkBlue;
+        background-color: $yellow;
       }
     }
   }
 }
 
-@media only screen and (max-width: 990px) {
+@include media("<=990px") {
   .navbar-collapse.collapsing,
   .navbar-collapse.collapse.show {
     .navbar-nav {

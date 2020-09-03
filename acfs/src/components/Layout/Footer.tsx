@@ -3,9 +3,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import acfsLogo from "../../../assets/images/acfs-4.png";
+import acfsLogo from "../../assets/images/acfs-4.png";
 
-import "./footer.scss";
+import "../../assets/scss/footer.scss";
 
 const Footer: React.FC = () => {
   return (

@@ -1,22 +1,25 @@
+@import "variables.scss";
+@import "breakpoint.scss";
+
 .single-post {
-  @media screen and (max-width: 991px) {
+  @include media("<992px") {
     margin-bottom: 1.2rem;
   }
 
   .post-date {
     text-align: center;
     border-right: 2px solid;
-    color: var(--color-secondary);
+    color: $yellow;
     text-transform: uppercase;
 
-    @media screen and (max-width: 991px) {
+    @include media("<992px") {
       border-right: none;
       margin-bottom: 1rem;
     }
   }
   .post-content {
     p {
-      @media screen and (max-width: 575px) {
+      @include media("<tablet") {
         margin-left: 0 !important;
         text-align: center;
       }

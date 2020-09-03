@@ -6,7 +6,7 @@ const AlertNotice: React.FC = () => {
     <Alert
       key={1}
       variant="danger"
-      className="alert-heading text-center position-absolute w-100 rounded-0 py-3Y"
+      className="alert-heading text-center position-absolute w-100 rounded-0 py-3Y z-100"
     >
       Due to the impact, the spread of Coronavirus is having in Alberta, we will
       be prioritizing certain requests for our computers and related equipment.

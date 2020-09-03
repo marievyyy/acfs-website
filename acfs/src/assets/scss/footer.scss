@@ -1,7 +1,10 @@
+@import "variables.scss";
+@import "breakpoint.scss";
+
 .footer {
   padding-top: 5rem;
   padding-bottom: 6rem;
-  background-image: url(../../../assets/images/footer.png);
+  background-image: url(../images/footer.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9,27 +12,27 @@
   img {
     max-width: 45%;
 
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @include media(">=tablet", "<1200px") {
       max-width: 20%;
     }
 
-    @media screen and (max-width: 767px) {
+    @include media("<=tablet") {
       max-width: 30%;
     }
   }
 
   h4 {
-    color: white;
+    color: $white;
 
     &.mobile {
-      @media screen and (max-width: 765px) {
+      @include media("<=tablet") {
         margin-top: 3rem;
       }
     }
   }
   p {
-    color: var(--color-light);
-    @media screen and (max-width: 765px) {
+    color: $lightBlue;
+    @include media("<=tablet") {
       margin-bottom: 0;
     }
   }

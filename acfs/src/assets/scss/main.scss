@@ -1,6 +1,6 @@
 /* Custom CSS */
 
-@import "./variants.scss";
+@import "variables.scss";
 
 /* fonts */
 @import "../fonts/fonts.css";
@@ -10,7 +10,7 @@ html ::-webkit-scrollbar {
 }
 
 html ::-webkit-scrollbar-thumb {
-  background: var(--color-light);
+  background: $lightBlue;
 }
 
 html ::-webkit-scrollbar-track {
@@ -32,4 +32,6 @@ html {
 
 body {
   font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
 }

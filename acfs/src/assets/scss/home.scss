@@ -1,28 +1,89 @@
+@import "variables.scss";
+@import "breakpoint.scss";
+
 // HOME BANNER
 .hero-banner {
-  background-image: url(../../assets/images/h1_hero-1.jpg);
+  background-image: url(../../assets/images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100vh;
+  position: relative;
 
-  .hero__caption h1 {
-    font-size: 50px;
-    font-weight: 800;
-    margin-bottom: 14px;
-    color: var(--color-primary);
-    line-height: 1.2;
-    text-transform: capitalize;
-    margin-bottom: 29px;
-
-    @media screen and (max-width: 1200px) {
-      font-size: 40px;
+  .hero__container {
+    @include media(">900px", "<992px") {
+      max-width: 930px;
     }
   }
 
-  .hero__caption p {
-    color: var(--color-light);
-    width: 75%;
+  .hero__caption {
+    @include media("<tablet") {
+      padding: 0 1.5rem;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: $darkBlue;
+      line-height: 1.2;
+      text-transform: capitalize;
+      margin-bottom: 29px;
+
+      @include media("<=1200px") {
+        font-size: 40px;
+      }
+    }
+    p {
+      color: $lightBlue;
+      width: 75%;
+    }
+
+    .btn-row {
+      width: 256px;
+      position: relative;
+      z-index: 2;
+
+      a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: $yellow;
+        svg {
+          margin-left: 16px;
+          border: 1px solid $yellow;
+          padding: 6px;
+          height: 30px;
+          width: 30px;
+          border-radius: 100px;
+          transition: 0.4s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            background-color: $yellow;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 50%;
+    height: 100vh;
+
+    img {
+      position: relative;
+      height: 100%;
+
+      @include media("<=900px") {
+        display: none;
+      }
+    }
   }
 }
 
@@ -33,14 +94,14 @@
   padding: 5rem 0;
 
   .row {
-    @media screen and (max-width: 768px) {
+    @include media("<=tablet") {
       padding: 0 30px;
     }
   }
 }
 
 .counter {
-  background-color: #f1f1f1;
+  background-color: $lightGray;
 }
 
 // WHY DONATE
@@ -50,18 +111,18 @@
   background-position: center center;
   background-size: cover;
 
-  @media screen and (max-width: 1200px) {
+  @include media("<=1200px") {
     background-image: none;
-    background-color: var(--color-primary);
+    background-color: $darkBlue;
   }
 
   .offset-xl-6 {
-    @media (min-width: 1200px) and (max-width: 1366px) {
+    @include media(">=1200px", "<=desktop") {
       margin-left: 45%;
     }
   }
 
-  @media screen and (max-width: 1080px) {
+  @include media("<=tablet-landscape") {
     background-position: right center;
   }
 
@@ -71,16 +132,16 @@
 
   h1,
   h5 {
-    color: white;
+    color: $white;
   }
 
   p {
-    color: var(--color-light);
+    color: $lightBlue;
   }
 }
 
 .counter {
-  @media screen and (max-width: 991px) {
+  @include media("<992px") {
     text-align: center;
   }
 
@@ -91,16 +152,16 @@
     margin-bottom: 1.2rem;
     font-size: 3.5rem;
     font-weight: bold;
-    color: var(--color-secondary);
+    color: $yellow;
 
-    @media (min-width: 992px) and (max-width: 1200px) {
+    @include media(">992px", "<=tablet-landscape") {
       font-size: 3rem;
     }
   }
 
   p {
-    color: var(--color-light);
-    @media screen and (max-width: 991px) {
+    color: $lightBlue;
+    @include media("<992px") {
       margin-bottom: 4.5rem;
     }
   }
@@ -108,17 +169,21 @@
 
 // ANNOUNCEMENT
 .announcement {
-  color: white;
+  color: $white;
   margin: 5rem 0;
   .announcement-container {
-    background-color: var(--color-primary);
+    background-color: $darkBlue;
     padding: 4rem 10rem;
 
-    @media (min-width: 576px) and (max-width: 991px) {
+    @include media(">tablet", "<tablet-landscape") {
+      padding: 3rem;
+    }
+
+    @include media(">phone-landscape", "<tablet") {
       padding: 4rem;
     }
 
-    @media screen and (max-width: 575px) {
+    @include media("<phone-landscape") {
       padding: 4rem 3rem;
     }
 
@@ -127,7 +192,7 @@
         letter-spacing: 3px;
       }
       h6 {
-        color: var(--color-light);
+        color: $lightBlue;
       }
     }
   }
@@ -135,23 +200,23 @@
   .more {
     justify-content: flex-end;
 
-    @media screen and (max-width: 992px) {
+    @include media("<992px") {
       justify-content: center;
     }
 
     button {
       border-radius: 0;
       padding: 0.5rem 1.5rem;
-      background-color: #f1f1f1;
-      color: var(--color-primary);
+      background-color: $lightGray;
+      color: $darkBlue;
       outline: none;
       border: 0;
 
       &:hover {
-        color: white;
+        color: $white;
         outline: 0;
         box-shadow: none;
-        background-color: var(--color-secondary);
+        background-color: $yellow;
       }
     }
   }
@@ -160,7 +225,7 @@
 // PARTNERS
 .partners {
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: $lightGray;
 
   .partners-container {
     padding: 5rem 6rem 1rem;
@@ -173,11 +238,11 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: bold;
-      color: var(--color-primary);
+      color: $darkBlue;
     }
 
     p {
-      color: var(--color-light);
+      color: $lightBlue;
       margin-bottom: 2.5rem;
     }
   }
@@ -191,7 +256,7 @@
       font-size: 25px;
       line-height: 1;
       opacity: 1;
-      color: var(--color-primary);
+      color: $darkBlue;
     }
 
     .slick-track {
@@ -213,7 +278,7 @@
   }
 
   .partners-list {
-    background-color: white;
+    background-color: $white;
     padding: 3rem 0;
     border-radius: 10px;
 
@@ -243,14 +308,10 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: $darkBlue;
   }
 
   img {
-    max-width: 45%;
-  }
-
-  .s-100 {
-    max-width: 100% !important;
+    max-width: 100%;
   }
 }

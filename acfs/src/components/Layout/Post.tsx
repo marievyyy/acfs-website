@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import "./post.scss";
+import "../../assets/scss/post.scss";
 
 const Post: React.FC = () => {
   return (
