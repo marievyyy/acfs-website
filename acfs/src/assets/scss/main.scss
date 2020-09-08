@@ -33,5 +33,16 @@ html {
 body {
   font-family: "Noto Sans", sans-serif;
   overflow-x: hidden;
+  overscroll-behavior: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
   width: 100vw;
 }

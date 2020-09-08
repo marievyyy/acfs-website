@@ -25,6 +25,9 @@ const Card: React.FC<CardProps> = (props) => {
             <p>{props.title}</p>
             <p>{props.body}</p>
           </div>
+          <div className="card-bottom">
+            <p>Learn more</p>
+          </div>
         </div>
       </a>
     </Col>

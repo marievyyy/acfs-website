@@ -1,87 +1,103 @@
 @import "variables.scss";
 @import "breakpoint.scss";
 
-// HOME BANNER
-.hero-banner {
-  background-image: url(../../assets/images/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-
-  .hero__container {
-    @include media(">900px", "<992px") {
-      max-width: 930px;
-    }
+.home {
+  .alert-container {
+    position: relative;
+    z-index: 10;
   }
 
-  .hero__caption {
-    @include media("<tablet") {
-      padding: 0 1.5rem;
-    }
+  .hero-banner {
+    background-image: url(../../assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    width: 100%;
 
-    h1 {
-      font-size: 50px;
-      font-weight: 800;
-      margin-bottom: 14px;
-      color: $darkBlue;
-      line-height: 1.2;
-      text-transform: capitalize;
-      margin-bottom: 29px;
-
-      @include media("<=1200px") {
-        font-size: 40px;
+    .hero__container {
+      @include media(">900px", "<992px") {
+        max-width: 930px;
       }
-    }
-    p {
-      color: $lightBlue;
-      width: 75%;
-    }
 
-    .btn-row {
-      width: 256px;
-      position: relative;
-      z-index: 2;
+      .hero__inner {
+        height: 100vh;
+        align-items: center;
+        justify-content: space-between;
 
-      a {
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-decoration: none;
-        color: $yellow;
-        svg {
-          margin-left: 16px;
-          border: 1px solid $yellow;
-          padding: 6px;
-          height: 30px;
-          width: 30px;
-          border-radius: 100px;
-          transition: 0.4s ease-in-out;
-        }
+        .hero__caption {
+          @include media("<tablet") {
+            padding: 0 1.5rem;
+          }
 
-        &:hover {
-          svg {
-            background-color: $yellow;
-            color: $white;
+          h1 {
+            font-size: 50px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: $darkBlue;
+            line-height: 1.2;
+            text-transform: capitalize;
+            margin-bottom: 29px;
+
+            @include media("<=1200px") {
+              font-size: 40px;
+            }
+          }
+          p {
+            color: $lightBlue;
+            width: 75%;
+          }
+
+          .btn-row {
+            width: 256px;
+            position: relative;
+            z-index: 2;
+
+            a {
+              font-size: 1.2rem;
+              font-weight: 600;
+              text-decoration: none;
+              color: $yellow;
+              svg {
+                margin-left: 16px;
+                border: 1px solid $yellow;
+                padding: 6px;
+                height: 30px;
+                width: 30px;
+                border-radius: 100px;
+                transition: 0.4s ease-in-out;
+              }
+
+              &:hover {
+                svg {
+                  background-color: $yellow;
+                  color: $white;
+                }
+              }
+            }
           }
         }
-      }
-    }
-  }
 
-  .hero__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 50%;
-    height: 100vh;
+        .hero__image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50%;
+          height: 100vh;
+          .hero__image__inner {
+            overflow: hidden;
 
-    img {
-      position: relative;
-      height: 100%;
+            img {
+              position: relative;
+              width: 100%;
 
-      @include media("<=900px") {
-        display: none;
+              @include media("<=900px") {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -98,6 +114,11 @@
       padding: 0 30px;
     }
   }
+}
+
+.services {
+  position: relative;
+  z-index: 11;
 }
 
 .counter {
@@ -171,9 +192,12 @@
 .announcement {
   color: $white;
   margin: 5rem 0;
+
   .announcement-container {
     background-color: $darkBlue;
     padding: 4rem 10rem;
+    box-shadow: 5px 5px rgba(0, 31, 97, 0.2), 10px 10px rgba(0, 98, 90, 0.1),
+      15px 15px rgba(0, 98, 90, 0.05);
 
     @include media(">tablet", "<tablet-landscape") {
       padding: 3rem;
@@ -211,6 +235,7 @@
       color: $darkBlue;
       outline: none;
       border: 0;
+      transition: all 0.3s ease-out;
 
       &:hover {
         color: $white;
