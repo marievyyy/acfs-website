@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
@@ -96,62 +96,109 @@ const HomePartners: React.FC = () => {
         <Row>
           <Slider {...sliderSettings}>
             <div>
-              <img src={require(`../../../assets/images/alberta-logo.png`)} />
+              <img
+                src={require(`../../../assets/images/alberta-logo.png`)}
+                alt="Alberta Government"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/ama.png`)} />
+              <img src={require(`../../../assets/images/ama.png`)} alt="AMA" />
             </div>
             <div>
-              <img src={require(`../../../assets/images/atb-financial.png`)} />
+              <img
+                src={require(`../../../assets/images/atb-financial.png`)}
+                alt="ATB Financial"
+              />
             </div>
             <div>
               <img
                 src={require(`../../../assets/images/canada-gov-logo.png`)}
+                alt="Government of Canada"
               />
             </div>
             <div>
-              <img src={require(`../../../assets/images/csc.png`)} />
+              <img
+                src={require(`../../../assets/images/csc.png`)}
+                alt="Correctional Services Canada"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/google.png`)} />
+              <img
+                src={require(`../../../assets/images/google.png`)}
+                alt="Google"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/ntl.png`)} />
+              <img
+                src={require(`../../../assets/images/ntl.png`)}
+                alt="National Trust for Canada"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/husky-energy.png`)} />
+              <img
+                src={require(`../../../assets/images/husky-energy.png`)}
+                alt="Husky Energy"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/imperial-oil.png`)} />
+              <img
+                src={require(`../../../assets/images/imperial-oil.png`)}
+                alt="Imperial Oil"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/ised-logo.png`)} />
+              <img
+                src={require(`../../../assets/images/ised-logo.png`)}
+                alt="ISED"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/mawer.png`)} />
+              <img
+                src={require(`../../../assets/images/mawer.png`)}
+                alt="Mawer"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/rcmp.png`)} />
+              <img
+                src={require(`../../../assets/images/rcmp.png`)}
+                alt="Royal Canadian Mounted Police"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/scri.png`)} />
+              <img
+                src={require(`../../../assets/images/scri.png`)}
+                alt="Shanked Computer Recycling Inc"
+              />
             </div>
             <div>
               <img
                 src={require(`../../../assets/images/statistic-canada.png`)}
+                alt="Statistic Canada"
               />
             </div>
             <div>
-              <img src={require(`../../../assets/images/strathcona.jpg`)} />
+              <img
+                src={require(`../../../assets/images/strathcona.jpg`)}
+                alt="Strathcona"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/telus.png`)} />
+              <img
+                src={require(`../../../assets/images/telus.png`)}
+                alt="Telus"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/transalta.png`)} />
+              <img
+                src={require(`../../../assets/images/transalta.png`)}
+                alt="Transalta"
+              />
             </div>
             <div>
-              <img src={require(`../../../assets/images/wipro.png`)} />
+              <img
+                src={require(`../../../assets/images/wipro.png`)}
+                alt="Wipro"
+              />
             </div>
           </Slider>
         </Row>

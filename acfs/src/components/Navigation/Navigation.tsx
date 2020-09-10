@@ -57,17 +57,17 @@ const Navigation: React.FC = () => {
               <div className="header-social d-flex align-items-center justify-content-end">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <FontAwesomeIcon icon={faFacebook} size="lg" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <FontAwesomeIcon icon={faTwitter} size="lg" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <FontAwesomeIcon icon={faInstagram} size="lg" />
                     </a>
                   </li>

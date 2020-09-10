@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         >
           <Row>
             <Col xl={4}>
-              <img className="d-block mb-5" src={acfsLogo} />
+              <img className="d-block mb-5" src={acfsLogo} alt="ACFS Logo" />
             </Col>
             <Col xl={4} md={6}>
               <motion.div variants={child}>

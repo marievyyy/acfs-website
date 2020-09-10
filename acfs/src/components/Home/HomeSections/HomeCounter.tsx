@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import CountUp from "react-countup";
 
 import { motion, useAnimation } from "framer-motion";
@@ -7,7 +7,6 @@ import { useInView } from "react-intersection-observer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 
 const HomeCounter: React.FC = () => {
   const animation = useAnimation();
