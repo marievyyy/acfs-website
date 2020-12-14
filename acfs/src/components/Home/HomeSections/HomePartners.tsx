@@ -9,7 +9,7 @@ import Col from "react-bootstrap/Col";
 
 const HomePartners: React.FC = () => {
   const animation = useAnimation();
-  const [parent, inView] = useInView({
+  const [partnersRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px",
   });
@@ -60,7 +60,7 @@ const HomePartners: React.FC = () => {
 
   return (
     <motion.div
-      ref={parent}
+      ref={partnersRef}
       animate={animation}
       initial="hidden"
       variants={{

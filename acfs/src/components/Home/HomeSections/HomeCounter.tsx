@@ -11,10 +11,10 @@ import Col from "react-bootstrap/Col";
 const HomeCounter: React.FC = () => {
   const animation = useAnimation();
 
-  const [parent, inView] = useInView({
+  const [counterRef, inView] = useInView({
     threshold: 0.3,
-    rootMargin: "-150px",
     triggerOnce: true,
+    rootMargin: "-150px",
   });
 
   useEffect(() => {
@@ -30,7 +30,6 @@ const HomeCounter: React.FC = () => {
       transition: {
         duration: 1,
         ease: [0.6, 0.05, -0.01, 0.9],
-        staggerChildren: 0.3,
       },
     },
     hidden: {
@@ -41,7 +40,7 @@ const HomeCounter: React.FC = () => {
 
   return (
     <motion.div
-      ref={parent}
+      ref={counterRef}
       animate={animation}
       initial="hidden"
       variants={{
@@ -73,7 +72,7 @@ const HomeCounter: React.FC = () => {
                   />
                 </Col>
                 <Col lg={9}>
-                  <h1 ref={parent}>
+                  <h1>
                     <CountUp
                       start={0}
                       end={inView ? 2600 : 0}
@@ -99,7 +98,7 @@ const HomeCounter: React.FC = () => {
                   />
                 </Col>
                 <Col lg={9}>
-                  <h1 ref={parent}>
+                  <h1>
                     <CountUp
                       start={0}
                       end={inView ? 200 : 0}
@@ -128,7 +127,7 @@ const HomeCounter: React.FC = () => {
                   />
                 </Col>
                 <Col lg={9}>
-                  <h1 ref={parent}>
+                  <h1>
                     <CountUp
                       start={0}
                       end={inView ? 22300 : 0}

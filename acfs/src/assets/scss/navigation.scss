@@ -1,3 +1,4 @@
+@import "main.scss";
 @import "variables.scss";
 @import "breakpoint.scss";
 
@@ -59,6 +60,7 @@
         }
 
         .dropdown-toggle {
+          cursor: default;
           &:after {
             @include media(">=tablet") {
               display: none;
@@ -133,8 +135,6 @@
     }
 
     .donate.btn {
-      border: 0;
-      border-radius: 0;
       padding: 1rem 3rem;
       font-size: 16px;
       margin-left: 2rem;

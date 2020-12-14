@@ -46,3 +46,49 @@ body {
   -o-perspective: 1000;
   width: 100vw;
 }
+
+.d-contents {
+  display: contents;
+}
+
+.header {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+}
+
+.header-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    color: $white;
+  }
+}
+
+.header-2 {
+  h1 {
+    color: $darkBlue;
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 0;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  background-color: $darkBlue;
+  box-shadow: inset 0 0 0 0 $darkBlue;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}

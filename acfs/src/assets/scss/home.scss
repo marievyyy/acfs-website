@@ -15,6 +15,7 @@
     position: relative;
     z-index: 5;
     width: 100%;
+    overflow: hidden;
 
     .hero__container {
       @include media(">900px", "<992px") {
@@ -55,7 +56,7 @@
             z-index: 2;
 
             a {
-              font-size: 1.2rem;
+              font-size: 1.7rem;
               font-weight: 600;
               text-decoration: none;
               color: $yellow;
@@ -63,8 +64,8 @@
                 margin-left: 16px;
                 border: 1px solid $yellow;
                 padding: 6px;
-                height: 30px;
-                width: 30px;
+                height: 35px;
+                width: 35px;
                 border-radius: 100px;
                 transition: 0.4s ease-in-out;
               }
@@ -103,7 +104,6 @@
   }
 }
 
-.services,
 .why-donate,
 .counter,
 .annoucement {
@@ -117,8 +117,8 @@
 }
 
 .services {
-  position: relative;
-  z-index: 11;
+  margin: 40px auto;
+  padding: 3rem 4rem;
 }
 
 .counter {

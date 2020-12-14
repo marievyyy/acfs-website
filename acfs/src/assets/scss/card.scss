@@ -1,25 +1,29 @@
 @import "variables.scss";
+@import "main.scss";
 
 a {
+  display: block;
+
   &:hover {
     text-decoration: none;
   }
 }
 
-.card {
-  border: 1px solid transparent;
-  background: #b0b4b91f;
-  border-radius: 6px;
-  padding: 79px 33px;
-  max-height: 22rem;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease-in-out;
+.card-container {
+  background: $black;
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
 
   &:hover {
-    border: 1px solid $darkBlue;
-    background: #fff;
-    box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
-    transform: translateY(8px);
+    .card-image {
+      opacity: 0.4;
+    }
   }
 
   &:hover h5 a {
@@ -30,63 +34,57 @@ a {
     display: inline;
   }
 
-  .card-icon {
-    span {
-      font-size: 0px;
-      margin-bottom: 10px;
-      display: block;
-      width: 100px;
-      height: 100px;
-      background: #7b869326;
-      line-height: 100px;
-      text-align: center;
-      border-radius: 50px;
-      display: inline-block;
-      -webkit-transition: all 0.4s ease-out 0s;
-      -moz-transition: all 0.4s ease-out 0s;
-      -ms-transition: all 0.4s ease-out 0s;
-      -o-transition: all 0.4s ease-out 0s;
-      transition: all 0.4s ease-out 0s;
+  .card-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    padding: 32px;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-      img {
-        max-width: 3.5rem;
-      }
+    &.apply {
+      background-image: url("../images/apply-sm.jpg");
+    }
+
+    &.donate {
+      background-image: url("../images/donate-sm.jpg");
+    }
+
+    &.internship {
+      background-image: url("../images/work-experience-sm.jpg");
+    }
+
+    &.recycle {
+      background-image: url("../images/recycle-sm.jpg");
+    }
+
+    h2 {
+      color: $white;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 3rem;
+      width: 85%;
+      margin-top: 16px;
     }
   }
 
-  .card-body {
-    p {
-      z-index: 10;
-      display: block;
-      font-size: 1rem;
-      color: $darkBlue;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 1.4;
-      margin-bottom: 20px;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s;
-    }
-  }
-
-  .card-bottom {
-    position: absolute;
-    bottom: 0;
+  .card-image {
+    top: 0;
     left: 0;
     width: 100%;
-    display: none;
-    background-color: $darkBlue;
-    border-color: $darkBlue;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-
-    p {
-      margin: 0;
-      padding: 1rem;
-      color: $white;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }

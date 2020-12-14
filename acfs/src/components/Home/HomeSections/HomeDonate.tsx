@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 
 const HomeDonate: React.FC = () => {
   const animation = useAnimation();
-  const [parent, inView] = useInView({
+  const [donateRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px",
   });
@@ -26,7 +26,6 @@ const HomeDonate: React.FC = () => {
       transition: {
         duration: 1,
         ease: [0.6, 0.05, -0.01, 0.9],
-        staggerChildren: 0.2,
       },
     },
     hidden: {
@@ -37,7 +36,7 @@ const HomeDonate: React.FC = () => {
 
   return (
     <motion.div
-      ref={parent}
+      ref={donateRef}
       animate={animation}
       initial="hidden"
       variants={{

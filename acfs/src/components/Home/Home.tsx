@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "framer-motion";
 
 import AlertNotice from "../Home/AlertNotice";
 import Container from "react-bootstrap/Container";
@@ -8,11 +7,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // components
+import HomeServices from "./HomeSections/HomeServices";
 import HomeDonate from "./HomeSections/HomeDonate";
 import HomeCounter from "./HomeSections/HomeCounter";
 import HomeAnnouncement from "./HomeSections/HomeAnnouncement";
 import HomePartners from "./HomeSections/HomePartners";
-import Card from "../Layout/Card";
 
 // CSS
 import "slick-carousel/slick/slick.css";
@@ -22,24 +21,8 @@ import "../../assets/scss/home.scss";
 // images
 import { ReactComponent as RightArrow } from "../../assets/images/arrow-right.svg";
 import heroImage from "../../assets/images/slider-5.jpg";
-import checklist from "../../assets/images/checklist.svg";
-import donate from "../../assets/images/donation.svg";
-import volunteer from "../../assets/images/group.svg";
-import recycle from "../../assets/images/light-bulb.svg";
 
 const Home: React.FC = () => {
-  const animation = useAnimation();
-  const [contentRef, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-300px",
-  });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-  }, [animation, inView]);
-
   const parent = {
     initial: { y: 30, opacity: 0 },
     animate: {
@@ -64,7 +47,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="home">
+    <motion.div exit={{ opacity: 0 }} className="home">
       <AlertNotice />
       {/* home banner */}
       <motion.div
@@ -94,7 +77,7 @@ const Home: React.FC = () => {
                   variants={child}
                   className="btn-row hero__caption__stagger-3"
                 >
-                  <a href="/" className="d-flex align-items-center">
+                  <a href="/apply" className="d-flex align-items-center">
                     Apply now <RightArrow />
                   </a>
                 </motion.div>
@@ -119,52 +102,7 @@ const Home: React.FC = () => {
         </Container>
       </motion.div>
       {/* services */}
-      <motion.div
-        className="services"
-        ref={contentRef}
-        animate={animation}
-        initial="hidden"
-        variants={{
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1, ease: [0.6, 0.05, -0.01, 0.9] },
-          },
-          hidden: {
-            opacity: 0,
-            y: 90,
-          },
-        }}
-      >
-        <Container className="service-container">
-          <Row>
-            <Card
-              link="#Apply"
-              title="Apply for computers"
-              image={checklist}
-              imageAlt="apply"
-            />
-            <Card
-              link="#Donate"
-              title="Donate"
-              image={donate}
-              imageAlt="donate"
-            />
-            <Card
-              link="#Work"
-              title="Work Experience"
-              image={volunteer}
-              imageAlt="work experience"
-            />
-            <Card
-              link="#Recycle"
-              title="Recycle"
-              image={recycle}
-              imageAlt="recycle"
-            />
-          </Row>
-        </Container>
-      </motion.div>
+      <HomeServices />
       {/* why donate */}
       <HomeDonate />
       {/* counter */}
@@ -214,7 +152,7 @@ const Home: React.FC = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

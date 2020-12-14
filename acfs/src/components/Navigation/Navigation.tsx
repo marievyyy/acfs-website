@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Container from "react-bootstrap/Container";
@@ -34,13 +35,11 @@ const Navigation: React.FC = () => {
             className="justify-content-end"
           >
             <Nav className="main-menu flex-xs-column">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#Donate" className="donate-menu d-none">
-                Donate
-              </Nav.Link>
-              <Nav.Link href="#Apply">Apply</Nav.Link>
-              <Nav.Link href="#Store">Store</Nav.Link>
-              <Nav.Link href="#Pay">Pay Us</Nav.Link>
+              <Link to="/">Home</Link>
+              <Nav.Link className="donate-menu d-none">Donate</Nav.Link>
+              <Link to="/apply">Apply</Link>
+              <Link to="/store">Store</Link>
+              <Link to="/pay-us">Pay Us</Link>
               <NavDropdown
                 title="About Us"
                 id="basic-nav-dropdown"

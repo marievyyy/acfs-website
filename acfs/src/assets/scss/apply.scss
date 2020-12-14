@@ -1,0 +1,67 @@
+@import "main.scss";
+@import "variables.scss";
+@import "breakpoint.scss";
+
+.apply {
+  .header {
+    &.header-1 {
+      background-image: url("../images/apply.jpg");
+    }
+  }
+
+  .apply__notice {
+    margin-top: 50px;
+
+    p {
+      padding: 4rem;
+      color: $danger;
+      background-color: $danger-light;
+      font-size: 1.3rem;
+      box-shadow: 0 10px 15px rgba(90, 90, 90, 0.1);
+
+      span {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .apply__details {
+    p {
+      font-size: 1.15rem;
+
+      span.yellow {
+        color: $yellow;
+      }
+    }
+  }
+
+  table {
+    thead {
+      background-color: $darkBlue;
+      color: $white;
+
+      th {
+        line-height: 50px;
+      }
+    }
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    background-color: $darkBlue;
+    box-shadow: inset 0 0 0 0 $darkBlue;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+
+    &:hover,
+    :active,
+    :focus {
+      box-shadow: inset 200px 0 0 0 #e0e0e0 !important;
+      border: 0;
+      color: $darkBlue;
+      background-color: $darkBlue;
+    }
+  }
+}

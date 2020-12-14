@@ -12,7 +12,7 @@ import Post from "../../Layout/Post";
 
 const HomeAnnouncement: React.FC = () => {
   const animation = useAnimation();
-  const [parent, inView] = useInView({
+  const [announcementRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-200px",
   });
@@ -26,7 +26,7 @@ const HomeAnnouncement: React.FC = () => {
   return (
     <motion.div
       className="announcement"
-      ref={parent}
+      ref={announcementRef}
       animate={animation}
       initial="hidden"
       variants={{

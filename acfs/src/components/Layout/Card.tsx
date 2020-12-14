@@ -1,37 +1,34 @@
-import * as React from "react";
-import Col from "react-bootstrap/Col";
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import "../../assets/scss/card.scss";
 
 interface CardProps {
-  href?: string;
   link?: string;
   title?: string;
-  body?: string;
-  image?: string;
-  imageAlt?: string;
+  imageBg?: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
+  const hoverTransition = {
+    duration: 0.6,
+    ease: [0.43, 0.13, 0.23, 0.96],
+  };
+
   return (
-    <Col lg={3} md={6} sm={6}>
-      <a href={props.link}>
-        <div className="card text-center">
-          <div className="card-icon">
-            <span>
-              <img alt={props.imageAlt} src={props.image} />
-            </span>
-          </div>
-          <div className="card-body">
-            <p>{props.title}</p>
-            <p>{props.body}</p>
-          </div>
-          <div className="card-bottom">
-            <p>Learn more</p>
-          </div>
-        </div>
-      </a>
-    </Col>
-  );
-};
+    <Link to={`${props.link}`}>
+      <div className="card-container">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={hoverTransition}
+          className={`card-details ${props.imageBg}`}
+        >
+          <h2>{props.title}</h2>
+        </motion.div>
+      </div>
+    </Link>
+  )
+}
 
 export default Card;

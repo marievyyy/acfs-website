@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Alert from "react-bootstrap/Alert";
 import { motion } from "framer-motion";
 
