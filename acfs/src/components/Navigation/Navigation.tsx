@@ -24,28 +24,29 @@ const Navigation: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       transition={{ duration: 1, ease: [0.6, 0.05, -0.01, 0.9] }}
     >
-      <Container fluid className="header-sticky position-sticky">
-        <Navbar expand="lg" variant="dark" className="py-0">
-          <Navbar.Brand href="#home">
+      <Container fluid className="navigation header-sticky position-sticky">
+        <Navbar expand="lg" variant="dark" className="navigation__navbar py-0">
+          <Navbar.Brand className="navigation__brand" href="#home">
             <img src={ACFSlogo} alt="ACFS Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="navigation__toggle" className="navigation__toggler" />
           <Navbar.Collapse
-            id="basic-navbar-nav"
+            id="navigation__toggle"
             className="justify-content-end"
           >
-            <Nav className="main-menu flex-xs-column">
+            <Nav className="navigation__list flex-xs-column">
               <Link to="/">Home</Link>
-              <Nav.Link className="donate-menu d-none">Donate</Nav.Link>
+              <Link to="/donate" className="navigation__list--donate d-none">Donate</Link>
               <Link to="/apply">Apply</Link>
               <Link to="/store">Store</Link>
               <Link to="/pay-us">Pay Us</Link>
               <NavDropdown
                 title="About Us"
-                id="basic-nav-dropdown"
+                id="navigation__dropdown"
+                className="navigation__droplist"
                 renderMenuOnMount={true}
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item as={Link} to="/announcement" key="1">
                   Announcement
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -53,27 +54,27 @@ const Navigation: React.FC = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">About Us</NavDropdown.Item>
               </NavDropdown>
-              <div className="header-social d-flex align-items-center justify-content-end">
+              <div className="navigation__social d-flex align-items-center justify-content-end">
                 <ul>
                   <li>
-                    <a href="/">
+                    <a href="https://www.facebook.com/albertacomputers/">
                       <FontAwesomeIcon icon={faFacebook} size="lg" />
                     </a>
                   </li>
                   <li>
-                    <a href="/">
+                    <a href="https://twitter.com/CFS_Alberta">
                       <FontAwesomeIcon icon={faTwitter} size="lg" />
                     </a>
                   </li>
                   <li>
-                    <a href="/">
+                    <a href="https://www.instagram.com/albertacomputersforschools/">
                       <FontAwesomeIcon icon={faInstagram} size="lg" />
                     </a>
                   </li>
                 </ul>
               </div>
             </Nav>
-            <Button className="donate" size="lg">
+            <Button className="navigation__donate" size="lg">
               Donate
             </Button>
           </Navbar.Collapse>

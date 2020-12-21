@@ -13,6 +13,7 @@ import Apply from "./components/Apply/Apply";
 import ApplyForm from "./containers/ApplyForm/ApplyForm";
 import Store from "./containers/Store/Store";
 import PayUs from "./containers/PayUs/PayUs";
+import Announcement from "./containers/Announcement/Announcement";
 import Footer from "./components/Layout/Footer";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/store" component={Store} />
           <Route exact path="/pay-us" component={PayUs} />
           <Route exact path="/apply-form" component={ApplyForm} />
+          <Route exact path="/announcement" component={Announcement} />
         </Switch>
       </AnimatePresence>
       <Footer />

@@ -106,7 +106,7 @@
 
 .why-donate,
 .counter,
-.annoucement {
+.home__annoucement {
   padding: 5rem 0;
 
   .row {
@@ -189,11 +189,11 @@
 }
 
 // ANNOUNCEMENT
-.announcement {
+.home__announcement {
   color: $white;
   margin: 5rem 0;
 
-  .announcement-container {
+  .home__announcement--container {
     background-color: $darkBlue;
     padding: 4rem 10rem;
     box-shadow: 5px 5px rgba(0, 31, 97, 0.2), 10px 10px rgba(0, 98, 90, 0.1),
@@ -229,6 +229,7 @@
     }
 
     button {
+      font-size: 16px;
       border-radius: 0;
       padding: 0.5rem 1.5rem;
       background-color: $lightGray;

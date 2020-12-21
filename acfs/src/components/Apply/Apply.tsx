@@ -112,7 +112,7 @@ const Apply: React.FC = () => {
         </Row>
         <Row className="mt-4">
           <Col xs={12}>
-            <div className="details">
+            <div className="apply__details">
               <h2 className="mt-4 mb-5 font-weight-bold">After applying</h2>
 
               <div className="m-4">

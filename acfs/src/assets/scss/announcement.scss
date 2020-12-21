@@ -1,0 +1,11 @@
+@import "main.scss";
+@import "variables.scss";
+@import "breakpoint.scss";
+
+.announcement {
+  .header {
+    &.header-1 {
+      background-image: url("../images/apply.jpg");
+    }
+  }
+}

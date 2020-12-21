@@ -25,7 +25,7 @@ const HomeAnnouncement: React.FC = () => {
 
   return (
     <motion.div
-      className="announcement"
+      className="home__announcement"
       ref={announcementRef}
       animate={animation}
       initial="hidden"
@@ -41,14 +41,14 @@ const HomeAnnouncement: React.FC = () => {
         },
       }}
     >
-      <Container className="announcement-container">
-        <Row className="announcement-title">
+      <Container className="home__announcement--container">
+        <Row className="home__announcement--title">
           <Col className="text-center">
             <h6 className="mb-4"> Our recent news</h6>
             <h1 className="mb-5">ANNOUNCEMENT</h1>
           </Col>
         </Row>
-        <Row className="announcement-post">
+        <Row className="home__announcement--post">
           <Post />
           <Col>
             <div className="d-flex more">

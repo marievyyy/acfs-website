@@ -4,183 +4,188 @@
 
 // Main Navigation
 
-.header-sticky {
-  position: relative;
-  top: 0;
-  background-color: $darkBlue;
-  z-index: 100;
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+.navigation {
+  &.header-sticky {
+    position: relative;
+    top: 0;
+    background-color: $darkBlue;
+    z-index: 100;
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 
-  .navbar {
-    .navbar-brand img {
-      max-width: 190px;
+    .navigation__navbar {
+      .navigation__brand img {
+        max-width: 190px;
 
-      @include media("<=desktop") {
-        max-width: 155px;
-      }
-
-      @include media("<=tablet") {
-        max-width: 145px;
-      }
-    }
-
-    .navbar-toggler {
-      font-size: 1.5rem;
-      outline: 0;
-      border: 0;
-      border-radius: 0;
-    }
-
-    .navbar-nav {
-      a {
-        color: $lightBlue;
-        font-weight: 400;
-        padding: 2.5rem 1.5rem;
-        font-size: 16px;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-        &.active,
-        &:focus,
-        &:hover {
-          color: $yellow;
+        @include media("<=desktop") {
+          max-width: 155px;
         }
 
-        @include media(">=tablet", "<=desktop") {
-          padding: 2.5rem 1rem;
+        @include media("<=tablet") {
+          max-width: 145px;
         }
       }
 
-      .dropdown {
-        &:hover .dropdown-menu {
-          display: block !important;
-        }
+      .navigation__toggler {
+        font-size: 1.5rem;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+      }
 
-        .dropdown-toggle {
-          cursor: default;
-          &:after {
-            @include media(">=tablet") {
-              display: none;
-            }
+      .navigation__list {
+        a {
+          color: $lightBlue;
+          font-weight: 400;
+          padding: 2.5rem 1.5rem;
+          font-size: 16px;
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          &.active,
+          &:focus,
+          &:hover {
+            color: $yellow;
+          }
+
+          @include media(">=tablet", "<=desktop") {
+            padding: 2.5rem 1rem;
           }
         }
 
-        .dropdown-menu {
-          padding: 17px 0;
-          border-radius: 0;
-          border: 0;
-          border-top: 5px solid $yellow;
-          background: rgba(0, 12, 32, 0.8);
-          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+        .navigation__droplist {
+          &:hover .dropdown-menu {
+            display: block !important;
+          }
 
-          @include media("<990px") {
+          .dropdown-toggle {
+            cursor: default;
+            &:after {
+              @include media(">=tablet") {
+                display: none;
+              }
+            }
+          }
+
+          .dropdown-menu {
+            padding: 17px 0;
+            border-radius: 0;
             border: 0;
-            padding: 0;
-            box-shadow: none;
-            background: transparent;
-          }
-
-          .dropdown-item {
-            padding: 6px 10px !important;
-            font-size: 16px;
-            color: $lightGray;
-            -webkit-transition: 0.3s;
-            -moz-transition: 0.3s;
-            -o-transition: 0.3s;
-            transition: 0.3s;
-
-            &.active,
-            &:focus,
-            &:hover {
-              color: $yellow !important;
-              padding-left: 20px !important;
-              background-color: transparent;
-            }
+            border-top: 5px solid $yellow;
+            background: rgba(0, 12, 32, 0.8);
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
 
             @include media("<990px") {
-              color: $lightBlue !important;
-              padding: 0.75rem 0.5rem 0.75rem 0 !important;
+              border: 0;
+              padding: 0;
+              box-shadow: none;
+              background: transparent;
+            }
+
+            .dropdown-item {
+              padding: 6px 10px !important;
+              font-size: 16px;
+              color: $lightGray;
+              -webkit-transition: 0.3s;
+              -moz-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+
+              &.active,
+              &:focus,
+              &:hover {
+                color: $yellow !important;
+                padding-left: 20px !important;
+                background-color: transparent;
+              }
+
+              @include media("<990px") {
+                color: $lightBlue !important;
+                padding: 0.75rem 0.5rem 0.75rem 0 !important;
+              }
             }
           }
         }
-      }
-      .header-social {
-        @include media("<992px") {
-          display: none !important;
-        }
-        > ul {
-          margin-bottom: 0;
-          padding-left: 10px;
+        .navigation__social {
+          @include media("<992px") {
+            display: none !important;
+          }
+          > ul {
+            margin-bottom: 0;
+            padding-left: 10px;
 
-          li {
-            display: inline-block;
+            li {
+              display: inline-block;
 
-            a {
-              color: $lightBlue;
-              font-size: 14px;
-              padding: 2.5rem 1rem;
+              a {
+                color: $lightBlue;
+                font-size: 14px;
+                padding: 2.5rem 1rem;
 
-              &:hover,
-              :focus,
-              :active {
-                color: $yellow;
+                &:hover,
+                :focus,
+                :active {
+                  color: $yellow;
+                }
               }
             }
           }
         }
       }
-    }
 
-    .donate.btn {
-      padding: 1rem 3rem;
-      font-size: 16px;
-      margin-left: 2rem;
-      color: $darkBlue;
-      background-color: $yellow;
-      box-shadow: inset 0 0 0 0 $darkBlue;
-      -webkit-transition: all ease 0.8s;
-      -moz-transition: all ease 0.8s;
-      transition: all ease 0.8s;
-
-      &:hover,
-      :active {
-        box-shadow: inset 200px 0 0 0 #e0e0e0 !important;
-        border: 0;
+      .navigation__donate {
+        padding: 1rem 3rem;
+        font-size: 16px;
+        margin-left: 2rem;
         color: $darkBlue;
         background-color: $yellow;
+        box-shadow: inset 0 0 0 0 $darkBlue;
+        -webkit-transition: all ease 0.8s;
+        -moz-transition: all ease 0.8s;
+        transition: all ease 0.8s;
+
+        &:hover,
+        :active {
+          box-shadow: inset 200px 0 0 0 #e0e0e0 !important;
+          border: 0;
+          color: $darkBlue;
+          background-color: $yellow;
+        }
       }
     }
   }
 }
-
 @include media("<=990px") {
   .navbar-collapse.collapsing,
   .navbar-collapse.collapse.show {
-    .navbar-nav {
-      .donate-menu {
+    .navigation__list {
+      a {
+        padding: 1rem 0.5rem !important;
+        &:hover {
+          padding-left: 20px !important;
+        }
+      }
+
+      .navigation__list--donate {
         display: inline !important;
       }
 
-      .nav-link {
-        padding: 0.75rem 0.5rem !important;
-
-        &:hover {
-          padding-left: 20px !important;
+      .navigation__droplist {
+        .dropdown-menu {
+          padding-left: 2rem;
+        }
+        .dropdown-toggle::after {
+          position: absolute;
+          right: 25px;
+          top: 10%;
         }
       }
     }
   }
 
-  .dropdown-toggle::after {
-    position: absolute;
-    right: 25px;
-    top: 10%;
-  }
-
-  .donate.btn {
+  .navigation__donate {
     display: none;
   }
 }
