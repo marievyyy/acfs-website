@@ -28,7 +28,7 @@ const Apply: React.FC = () => {
       exit={{ opacity: 0 }}
       className="apply"
     >
-      <div className="apply__header header header-1">
+      <div className="apply__header header header-img">
         <h1>Apply for devices</h1>
       </div>
       <Container>

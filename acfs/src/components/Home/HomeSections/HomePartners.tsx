@@ -78,10 +78,10 @@ const HomePartners: React.FC = () => {
           opacity: 0,
         },
       }}
-      className="partners"
+      className="home__partners"
     >
-      <Container className="partners-container">
-        <Row className="partners-title">
+      <Container className="h-partners__container">
+        <Row className="h-partners__title">
           <Col xs={12} className="text-center">
             <h1 className="mb-5">Partners</h1>
             <p>

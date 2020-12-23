@@ -49,10 +49,10 @@ const Navigation: React.FC = () => {
                 <NavDropdown.Item as={Link} to="/announcement" key="1">
                   Announcement
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to="/testimonials" key="2">
                   Testimonials
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">About Us</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/about-us" key="3">About Us</NavDropdown.Item>
               </NavDropdown>
               <div className="navigation__social d-flex align-items-center justify-content-end">
                 <ul>

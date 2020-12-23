@@ -3,8 +3,8 @@
 @import "breakpoint.scss";
 
 .apply {
-  .header {
-    &.header-1 {
+  .apply__header {
+    &.header-img {
       background-image: url("../images/apply.jpg");
     }
   }
@@ -16,8 +16,18 @@
       padding: 4rem;
       color: $danger;
       background-color: $danger-light;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       box-shadow: 0 10px 15px rgba(90, 90, 90, 0.1);
+
+      @include media(">phone-landscape", "<=tablet") {
+        padding: 3.5rem;
+        font-size: 1.1rem;
+      }
+
+      @include media("<=phone-landscape") {
+        padding: 3rem;
+        font-size: 1rem;
+      }
 
       span {
         font-weight: 700;
@@ -28,6 +38,10 @@
   .apply__details {
     p {
       font-size: 1.15rem;
+
+      @include media("<=phone-landscape") {
+        font-size: 1rem;
+      }
 
       span.yellow {
         color: $yellow;

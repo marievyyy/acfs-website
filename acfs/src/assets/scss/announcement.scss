@@ -4,8 +4,12 @@
 
 .announcement {
   .header {
-    &.header-1 {
+    &.header-img {
       background-image: url("../images/apply.jpg");
     }
+  }
+
+  .announcement__container {
+    margin: 5rem auto;
   }
 }

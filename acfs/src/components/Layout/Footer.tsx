@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             <Col xl={4}>
               <img className="d-block mb-5" src={acfsLogo} alt="ACFS Logo" />
             </Col>
-            <Col xl={4} md={6}>
+            <Col xl={4} md={6} sm={12}>
               <motion.div variants={child}>
                 <h4 className="mb-4">Edmonton</h4>
                 <p>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                 <p>Pick-Up and Drop-Off Time : 08:00 - 15:30</p>
               </motion.div>
             </Col>
-            <Col xl={4} md={6}>
+            <Col xl={4} md={6} sm={12}>
               <motion.div variants={child}>
                 <h4 className="mb-4 mobile">Calgary</h4>
                 <p>

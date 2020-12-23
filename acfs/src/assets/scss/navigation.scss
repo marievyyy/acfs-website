@@ -15,6 +15,11 @@
     box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 
     .navigation__navbar {
+      @include media("<=phone") {
+        margin: 0;
+        padding: 0;
+      }
+
       .navigation__brand img {
         max-width: 190px;
 
@@ -25,6 +30,9 @@
         @include media("<=tablet") {
           max-width: 145px;
         }
+        @include media("<=phone") {
+          max-width: 100px;
+        }
       }
 
       .navigation__toggler {
@@ -32,6 +40,10 @@
         outline: 0;
         border: 0;
         border-radius: 0;
+
+        @include media("<=phone") {
+          padding: 0;
+        }
       }
 
       .navigation__list {

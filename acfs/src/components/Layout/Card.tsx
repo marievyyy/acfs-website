@@ -18,11 +18,11 @@ const Card: React.FC<CardProps> = (props) => {
 
   return (
     <Link to={`${props.link}`}>
-      <div className="card-container">
+      <div className="card__container">
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={hoverTransition}
-          className={`card-details ${props.imageBg}`}
+          className={`card__details ${props.imageBg}`}
         >
           <h2>{props.title}</h2>
         </motion.div>

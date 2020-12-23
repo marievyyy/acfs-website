@@ -56,27 +56,27 @@ const HomeServices: React.FC = () => {
           opacity: 0,
         },
       }}
-      className="services"
+      className="home__services"
     >
-      <Container fluid className="service-container">
+      <Container fluid className="h-services__container">
         <Row>
-          <Col lg={3} md={6} sm={6}>
-            <motion.div variants={cardChild}>
+          <Col xl={3} md={6} xs={12}>
+            <motion.div className="h-services__item" variants={cardChild}>
               <Card link="/apply" title="Apply for computers" imageBg="apply" />
             </motion.div>
           </Col>
-          <Col lg={3} md={6} sm={6}>
-            <motion.div variants={cardChild}>
+          <Col xl={3} md={6} xs={12}>
+            <motion.div className="h-services__item" variants={cardChild}>
               <Card link="/donate" title="Donate" imageBg="donate" />
             </motion.div>
           </Col>
-          <Col lg={3} md={6} sm={6}>
-            <motion.div variants={cardChild}>
+          <Col xl={3} md={6} xs={12}>
+            <motion.div className="h-services__item" variants={cardChild}>
               <Card link="/work" title="Work Experience" imageBg="internship" />
             </motion.div>
           </Col>
-          <Col lg={3} md={6} sm={6}>
-            <motion.div variants={cardChild}>
+          <Col xl={3} md={6} xs={12}>
+            <motion.div className="h-services__item" variants={cardChild}>
               <Card link="/recycle" title="Recycle" imageBg="recycle" />
             </motion.div>
           </Col>

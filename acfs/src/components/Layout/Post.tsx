@@ -7,14 +7,14 @@ import "../../assets/scss/post.scss";
 
 const Post: React.FC = () => {
   return (
-    <div className="single-post">
+    <div className="post">
       <Container>
         <Row>
-          <Col lg={2} className="post-date">
+          <Col lg={2} className="post__date">
             <h1>22</h1>
             <h5>Aug</h5>
           </Col>
-          <Col lg={10} className="post-content">
+          <Col lg={10} className="post__content">
             <p className="ml-3">
               IMPORTANT NOTICE: Due to the impact the spread of Coronavirus is
               having in Alberta, we will be prioritizing certain requests for

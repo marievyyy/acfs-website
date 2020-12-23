@@ -41,17 +41,17 @@ const HomeAnnouncement: React.FC = () => {
         },
       }}
     >
-      <Container className="home__announcement--container">
-        <Row className="home__announcement--title">
+      <Container className="h-announcement__container">
+        <Row className="h-announcement__title">
           <Col className="text-center">
             <h6 className="mb-4"> Our recent news</h6>
             <h1 className="mb-5">ANNOUNCEMENT</h1>
           </Col>
         </Row>
-        <Row className="home__announcement--post">
+        <Row className="h-announcement__post">
           <Post />
           <Col>
-            <div className="d-flex more">
+            <div className="h-announcement__more d-flex">
               <Button size="sm">More</Button>
             </div>
           </Col>

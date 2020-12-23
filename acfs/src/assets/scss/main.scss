@@ -1,8 +1,7 @@
 /* Custom CSS */
 
 @import "variables.scss";
-
-/* fonts */
+@import "breakpoint.scss";
 @import "../fonts/fonts.css";
 
 html ::-webkit-scrollbar {
@@ -60,12 +59,17 @@ body {
   h1 {
     font-size: 3.4rem;
     font-weight: 700;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
+
+    @include media("<tablet") {
+      font-size: 2rem;
+    }
   }
 }
 
-.header-1 {
+.header-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

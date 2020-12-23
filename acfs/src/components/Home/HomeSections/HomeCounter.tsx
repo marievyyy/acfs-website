@@ -58,12 +58,11 @@ const HomeCounter: React.FC = () => {
           opacity: 0,
         },
       }}
-      className="counter"
+      className="home__counter"
     >
-      <Container>
+      <Container className="h-counter__container">
         <Row>
-          <Col lg={4} className="counter-1">
-            <Row>
+          <Col lg={4}>
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
@@ -86,10 +85,8 @@ const HomeCounter: React.FC = () => {
                   <p>From our federal government, corporates and individuals</p>
                 </Col>
               </motion.div>
-            </Row>
           </Col>
-          <Col lg={4} className="counter-1">
-            <Row>
+          <Col lg={4}>
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
@@ -115,10 +112,8 @@ const HomeCounter: React.FC = () => {
                   </p>
                 </Col>
               </motion.div>
-            </Row>
           </Col>
-          <Col lg={4} className="counter-1">
-            <Row>
+          <Col lg={4}>
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
@@ -144,7 +139,6 @@ const HomeCounter: React.FC = () => {
                   </p>
                 </Col>
               </motion.div>
-            </Row>
           </Col>
         </Row>
       </Container>

@@ -2,12 +2,24 @@
 @import "breakpoint.scss";
 
 .home {
-  .alert-container {
+  .alert__container {
     position: relative;
     z-index: 10;
+
+    @include media(">391px", "<=phone-landscape") {
+      font-size: 14px;
+    }
+
+    @include media(">phone", "<=391px") {
+      font-size: 12px;
+    }
+
+    @include media("<=phone") {
+      font-size: 10px;
+    }
   }
 
-  .hero-banner {
+  .home__banner {
     background-image: url(../../assets/images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -41,8 +53,28 @@
             text-transform: capitalize;
             margin-bottom: 29px;
 
-            @include media("<=1200px") {
+            @include media(">tablet", "<=tablet-landscape") {
               font-size: 40px;
+            }
+
+            @include media(">phone-landscape", "<=tablet") {
+              font-size: 35px;
+            }
+
+            @include media(">391px", "<=phone-landscape") {
+              font-size: 22px;
+            }
+
+            @include media(">phone", "<=391px") {
+              font-size: 20px;
+            }
+
+            @include media("<=phone") {
+              font-size: 25px;
+            }
+
+            @include media("<=301px") {
+              display: none;
             }
           }
           p {
@@ -50,16 +82,25 @@
             width: 75%;
           }
 
-          .btn-row {
+          .hero__button {
             width: 256px;
             position: relative;
             z-index: 2;
 
             a {
-              font-size: 1.7rem;
+              font-size: 30px;
               font-weight: 600;
               text-decoration: none;
               color: $yellow;
+
+              @include media(">phone", "<=phone-landscape") {
+                font-size: 20px;
+              }
+
+              @include media("<=phone") {
+                font-size: 16px;
+              }
+
               svg {
                 margin-left: 16px;
                 border: 1px solid $yellow;
@@ -104,8 +145,8 @@
   }
 }
 
-.why-donate,
-.counter,
+.home__donate,
+.home__counter,
 .home__annoucement {
   padding: 5rem 0;
 
@@ -116,35 +157,63 @@
   }
 }
 
-.services {
+.home__services {
   margin: 40px auto;
   padding: 3rem 4rem;
-}
 
-.counter {
-  background-color: $lightGray;
+  @include media(">1200px", "<=desktop") {
+    padding: 1rem;
+  }
+
+  @include media(">tablet-landscape", "<1200px") {
+    padding: 2rem;
+  }
+
+  @include media(">phone", "<=tablet") {
+    padding: 1rem;
+  }
+
+  @include media("<=phone") {
+    padding: 0px;
+  }
+
+  .h-services__item {
+    @include media(">tablet") {
+      margin-bottom: 40px;
+    }
+
+    @include media(">phone", "<=tablet") {
+      margin-bottom: 30px;
+    }
+
+    @include media("<=phone") {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 // WHY DONATE
-.why-donate {
+.home__donate {
   background-image: url(../../assets/images/why-donate-primary.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
-  @include media("<=1200px") {
+  @include media("<=991px") {
     background-image: none;
     background-color: $darkBlue;
   }
 
-  .offset-xl-6 {
-    @include media(">=1200px", "<=desktop") {
-      margin-left: 45%;
+  .h-donate__container {
+    @include media("<992px") {
+      max-width: 100%;
     }
-  }
 
-  @include media("<=tablet-landscape") {
-    background-position: right center;
+    h1 {
+      @include media("<phone-landscape") {
+        font-size: 22px;
+      }
+    }
   }
 
   img {
@@ -161,9 +230,20 @@
   }
 }
 
-.counter {
+// HOME COUNTER
+.home__counter {
+  background-color: $lightGray;
+
   @include media("<992px") {
     text-align: center;
+  }
+
+  .h-counter__container {
+    .row {
+      @include media("<=phone") {
+        padding: 0px;
+      }
+    }
   }
 
   img {
@@ -193,7 +273,7 @@
   color: $white;
   margin: 5rem 0;
 
-  .home__announcement--container {
+  .h-announcement__container {
     background-color: $darkBlue;
     padding: 4rem 10rem;
     box-shadow: 5px 5px rgba(0, 31, 97, 0.2), 10px 10px rgba(0, 98, 90, 0.1),
@@ -203,61 +283,73 @@
       padding: 3rem;
     }
 
-    @include media(">phone-landscape", "<tablet") {
-      padding: 4rem;
+    @include media(">phone", "<=tablet") {
+      padding: 2rem;
     }
 
-    @include media("<phone-landscape") {
-      padding: 4rem 3rem;
+    @include media("<=phone") {
+      padding: 1.5rem 1rem;
     }
 
-    .announcement-title {
+    .h-announcement__title {
       h1 {
         letter-spacing: 3px;
+
+        @include media("<=phone-landscape") {
+          font-size: 30px;
+          letter-spacing: 0px;
+        }
       }
       h6 {
         color: $lightBlue;
       }
     }
-  }
+    .h-announcement__more {
+      justify-content: flex-end;
 
-  .more {
-    justify-content: flex-end;
+      @include media("<992px") {
+        justify-content: center;
+      }
 
-    @include media("<992px") {
-      justify-content: center;
-    }
+      button {
+        font-size: 16px;
+        border-radius: 0;
+        padding: 0.5rem 1.5rem;
+        background-color: $lightGray;
+        color: $darkBlue;
+        outline: none;
+        border: 0;
+        transition: all 0.3s ease-out;
 
-    button {
-      font-size: 16px;
-      border-radius: 0;
-      padding: 0.5rem 1.5rem;
-      background-color: $lightGray;
-      color: $darkBlue;
-      outline: none;
-      border: 0;
-      transition: all 0.3s ease-out;
-
-      &:hover {
-        color: $white;
-        outline: 0;
-        box-shadow: none;
-        background-color: $yellow;
+        &:hover {
+          color: $white;
+          outline: 0;
+          box-shadow: none;
+          background-color: $yellow;
+        }
       }
     }
   }
 }
 
 // PARTNERS
-.partners {
+.home__partners {
   padding: 0;
   background-color: $lightGray;
 
-  .partners-container {
+  .h-partners__container {
     padding: 5rem 6rem 1rem;
+
+    @include media(">phone-landscape", "<tablet") {
+      padding: 3rem;
+    }
+
+    @include media("<=phone-landscape") {
+      padding: 1rem;
+    }
   }
 
-  .partners-title {
+  .h-partners__title {
     margin-bottom: 0.5rem;
 
     h1 {
@@ -302,33 +394,19 @@
       }
     }
   }
-
-  .partners-list {
-    background-color: $white;
-    padding: 3rem 0;
-    border-radius: 10px;
-
-    .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 0;
-      &.small-img {
-        img {
-          max-width: 25%;
-        }
-      }
-
-      img {
-        max-width: 50%;
-      }
-    }
-  }
 }
 
 // Contributors
-.contributors {
+.home__contributors {
   padding: 1.5rem 0;
+
+  @include media(">phone", "<=tablet") {
+    padding: 3rem;
+  }
+
+  @include media("<=phone") {
+    padding: 2rem;
+  }
 
   h4 {
     text-transform: uppercase;

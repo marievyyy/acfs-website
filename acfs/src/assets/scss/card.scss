@@ -9,7 +9,7 @@ a {
   }
 }
 
-.card-container {
+.card__container {
   background: $black;
   position: relative;
   height: 400px;
@@ -34,7 +34,7 @@ a {
     display: inline;
   }
 
-  .card-details {
+  .card__details {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -70,21 +70,6 @@ a {
       line-height: 3rem;
       width: 85%;
       margin-top: 16px;
-    }
-  }
-
-  .card-image {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
     }
   }
 }

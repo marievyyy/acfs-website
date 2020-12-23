@@ -54,7 +54,7 @@ const Home: React.FC = () => {
         variants={parent}
         initial="initial"
         animate="animate"
-        className="hero-banner d-flex align-items-center justify-content-center"
+        className="home__banner d-flex align-items-center justify-content-center"
       >
         <Container className="hero__container">
           <Row className="hero__inner">
@@ -62,12 +62,12 @@ const Home: React.FC = () => {
               <motion.div className="hero__caption">
                 <motion.h1
                   variants={child}
-                  className="hero__caption__stagger-1"
+                  className="hero__title"
                 >
                   Providing Essential <br />
                   Learning Tools
                 </motion.h1>
-                <motion.p variants={child} className="hero__caption__stagger-2">
+                <motion.p variants={child} className="hero__details">
                   In today's digital-learning environment, computers are a
                   necessity. ACFS provides about 10,000 computers per year to
                   schools, libraries, not-for-profit organizations and
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                 </motion.p>
                 <motion.div
                   variants={child}
-                  className="btn-row hero__caption__stagger-3"
+                  className="hero__button btn-row"
                 >
                   <a href="/apply" className="d-flex align-items-center">
                     Apply now <RightArrow />
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
       {/* partners */}
       <HomePartners />
       {/* contributors */}
-      <Container className="contributors">
+      <Container className="home__contributors">
         <Row>
           <Col
             md={3}

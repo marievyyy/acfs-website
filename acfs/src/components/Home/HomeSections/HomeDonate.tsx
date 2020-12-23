@@ -54,15 +54,15 @@ const HomeDonate: React.FC = () => {
           opacity: 0,
         },
       }}
-      className="why-donate d-flex align-items-center justify-content-center"
+      className="home__donate d-flex align-items-center justify-content-center"
     >
       <Container>
         <Row>
-          <Col xl={{ span: 7, offset: 6 }} md={12}>
+          <Col className="h-donate__container" lg={{ span: 7, offset: 5 }}  xl={{ span: 6, offset: 6 }} md={12}>
             <motion.h1 variants={child} className="mb-5">
               Why donate your old computer?
             </motion.h1>
-            <motion.div variants={child} className="purpose-1 mb-5">
+            <motion.div variants={child} className="donate__purpose--1 mb-5">
               <div className="d-flex align-items-center mb-4">
                 <img
                   src={require(`../../../assets/images/heart-yellow.svg`)}
@@ -77,7 +77,7 @@ const HomeDonate: React.FC = () => {
                 digital divide.
               </p>
             </motion.div>
-            <motion.div variants={child} className="purpose-2 mb-5">
+            <motion.div variants={child} className="donate__purpose--2 mb-5">
               <div className="d-flex align-items-center mb-4">
                 <img
                   src={require(`../../../assets/images/work-yellow.svg`)}
@@ -94,7 +94,7 @@ const HomeDonate: React.FC = () => {
                 your generous donations.
               </p>
             </motion.div>
-            <motion.div variants={child} className="purpose-3">
+            <motion.div variants={child} className="donate__purpose--3">
               <div className="d-flex align-items-center mb-4">
                 <img
                   src={require(`../../../assets/images/eco-friendly-yellow.svg`)}

@@ -1,12 +1,12 @@
 @import "variables.scss";
 @import "breakpoint.scss";
 
-.single-post {
+.post {
   @include media("<992px") {
     margin-bottom: 1.2rem;
   }
 
-  .post-date {
+  .post__date {
     text-align: center;
     border-right: 2px solid;
     color: $yellow;
@@ -17,7 +17,7 @@
       margin-bottom: 1rem;
     }
   }
-  .post-content {
+  .post__content {
     p {
       @include media("<tablet") {
         margin-left: 0 !important;
