@@ -13,7 +13,7 @@ const HomeServices: React.FC = () => {
   const animation = useAnimation();
   const [cardRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    rootMargin: "-200px",
   });
 
   useEffect(() => {

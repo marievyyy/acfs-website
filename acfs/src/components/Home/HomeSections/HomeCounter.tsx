@@ -8,6 +8,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import counterDonation from "../../../assets/images/donation.svg";
+import counterVolunteer from "../../../assets/images/volunteer.svg";
+import counterRefurbished from "../../../assets/images/pc.svg"
+
 const HomeCounter: React.FC = () => {
   const animation = useAnimation();
 
@@ -66,7 +70,7 @@ const HomeCounter: React.FC = () => {
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
-                    src={require(`../../../assets/images/donation.svg`)}
+                    src={counterDonation}
                     alt="computers donated"
                   />
                 </Col>
@@ -90,7 +94,7 @@ const HomeCounter: React.FC = () => {
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
-                    src={require(`../../../assets/images/volunteer.svg`)}
+                    src={counterVolunteer}
                     alt="volunteer"
                   />
                 </Col>
@@ -117,7 +121,7 @@ const HomeCounter: React.FC = () => {
               <motion.div variants={child} className="d-flex">
                 <Col lg={3}>
                   <img
-                    src={require(`../../../assets/images/pc.svg`)}
+                    src={counterRefurbished}
                     alt="desktop"
                   />
                 </Col>

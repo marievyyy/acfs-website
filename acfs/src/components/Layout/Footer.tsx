@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
           }}
         >
           <Row>
-            <Col xl={4}>
-              <img className="d-block mb-5" src={acfsLogo} alt="ACFS Logo" />
+            <Col xl={3}>
+                <img className="d-block mb-5" src={acfsLogo} alt="ACFS Logo" />
             </Col>
             <Col xl={4} md={6} sm={12}>
               <motion.div variants={child}>

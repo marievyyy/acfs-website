@@ -7,11 +7,30 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import logoAlberta from "../../../assets/images/alberta-logo.png";
+import logoAMA from "../../../assets/images/ama.png";
+import logoATB from "../../../assets/images/atb-financial.png";
+import logoCanada from "../../../assets/images/canada-gov-logo.png";
+import logoCSC from "../../../assets/images/csc.png";
+import logoGoogle from "../../../assets/images/google.png";
+import logoNTL from "../../../assets/images/ntl.png";
+import logoHuskyEnergy from "../../../assets/images/husky-energy.png";
+import logoImperialOil from "../../../assets/images/imperial-oil.png";
+import logoISED from "../../../assets/images/ised-logo.png";
+import logoMawer from "../../../assets/images/mawer.png";
+import logoRCMP from "../../../assets/images/rcmp.png";
+import logoSCRI from "../../../assets/images/scri.png";
+import logoStatisticCanada from "../../../assets/images/statistic-canada.png";
+import logoStrathcona from "../../../assets/images/strathcona.jpg";
+import logoTELUS from "../../../assets/images/telus.png";
+import logoTransAlta from "../../../assets/images/transalta.png";
+import logoWipro from "../../../assets/images/wipro.png";
+
 const HomePartners: React.FC = () => {
   const animation = useAnimation();
   const [partnersRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    rootMargin: "-200px",
   });
 
   useEffect(() => {
@@ -97,106 +116,106 @@ const HomePartners: React.FC = () => {
           <Slider {...sliderSettings}>
             <div>
               <img
-                src={require(`../../../assets/images/alberta-logo.png`)}
+                src={logoAlberta}
                 alt="Alberta Government"
               />
             </div>
             <div>
-              <img src={require(`../../../assets/images/ama.png`)} alt="AMA" />
+              <img src={logoAMA} alt="AMA" />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/atb-financial.png`)}
+                src={logoATB}
                 alt="ATB Financial"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/canada-gov-logo.png`)}
+                src={logoCanada}
                 alt="Government of Canada"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/csc.png`)}
+                src={logoCSC}
                 alt="Correctional Services Canada"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/google.png`)}
+                src={logoGoogle}
                 alt="Google"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/ntl.png`)}
+                src={logoNTL}
                 alt="National Trust for Canada"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/husky-energy.png`)}
+                src={logoHuskyEnergy}
                 alt="Husky Energy"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/imperial-oil.png`)}
+                src={logoImperialOil}
                 alt="Imperial Oil"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/ised-logo.png`)}
+                src={logoISED}
                 alt="ISED"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/mawer.png`)}
+                src={logoMawer}
                 alt="Mawer"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/rcmp.png`)}
+                src={logoRCMP}
                 alt="Royal Canadian Mounted Police"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/scri.png`)}
+                src={logoSCRI}
                 alt="Shanked Computer Recycling Inc"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/statistic-canada.png`)}
+                src={logoStatisticCanada}
                 alt="Statistic Canada"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/strathcona.jpg`)}
+                src={logoStrathcona}
                 alt="Strathcona"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/telus.png`)}
+                src={logoTELUS}
                 alt="Telus"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/transalta.png`)}
+                src={logoTransAlta}
                 alt="Transalta"
               />
             </div>
             <div>
               <img
-                src={require(`../../../assets/images/wipro.png`)}
+                src={logoWipro}
                 alt="Wipro"
               />
             </div>

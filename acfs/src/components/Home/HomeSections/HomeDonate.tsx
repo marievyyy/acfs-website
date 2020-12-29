@@ -6,11 +6,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import donateAccess from "../../../assets/images/heart-yellow.svg";
+import donateTraining from "../../../assets/images/work-yellow.svg";
+import donateGreen from "../../../assets/images/eco-friendly-yellow.svg";
+
+
 const HomeDonate: React.FC = () => {
   const animation = useAnimation();
   const [donateRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    rootMargin: "-200px",
   });
 
   useEffect(() => {
@@ -65,7 +70,7 @@ const HomeDonate: React.FC = () => {
             <motion.div variants={child} className="donate__purpose--1 mb-5">
               <div className="d-flex align-items-center mb-4">
                 <img
-                  src={require(`../../../assets/images/heart-yellow.svg`)}
+                  src={donateAccess}
                   alt="heart"
                 />
                 <h5 className="pl-3 mb-0">Digital Access for Albertans</h5>
@@ -80,7 +85,7 @@ const HomeDonate: React.FC = () => {
             <motion.div variants={child} className="donate__purpose--2 mb-5">
               <div className="d-flex align-items-center mb-4">
                 <img
-                  src={require(`../../../assets/images/work-yellow.svg`)}
+                  src={donateTraining}
                   alt="intern"
                 />
                 <h5 className="pl-3 mb-0">
@@ -97,7 +102,7 @@ const HomeDonate: React.FC = () => {
             <motion.div variants={child} className="donate__purpose--3">
               <div className="d-flex align-items-center mb-4">
                 <img
-                  src={require(`../../../assets/images/eco-friendly-yellow.svg`)}
+                  src={donateGreen}
                   alt="eco friendly"
                 />
                 <h5 className="pl-3 mb-0">Keeping the future green</h5>

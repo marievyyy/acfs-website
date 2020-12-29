@@ -21,6 +21,9 @@ import "../../assets/scss/home.scss";
 // images
 import { ReactComponent as RightArrow } from "../../assets/images/arrow-right.svg";
 import heroImage from "../../assets/images/slider-5.jpg";
+import contributorISED from "../../assets/images/ised.png";
+import contributorCanada from "../../assets/images/canada.png";
+import contributorAlberta from "../../assets/images/alberta.png";
 
 const Home: React.FC = () => {
   const parent = {
@@ -125,7 +128,7 @@ const Home: React.FC = () => {
             className="d-flex align-items-center justify-content-center"
           >
             <a href="http://www.ic.gc.ca/eic/site/cfs-ope.nsf/eng/home">
-              <img src={require(`../../assets/images/ised.png`)} alt="ISED" />
+              <img src={contributorISED} alt="ISED" />
             </a>
           </Col>
           <Col
@@ -134,7 +137,7 @@ const Home: React.FC = () => {
           >
             <a href="http://www.ic.gc.ca/eic/site/cfs-ope.nsf/eng/home">
               <img
-                src={require(`../../assets/images/canada.png`)}
+                src={contributorCanada}
                 alt="Alberta"
               />
             </a>
@@ -145,7 +148,7 @@ const Home: React.FC = () => {
           >
             <a href="https://www.alberta.ca/index.aspx" className="text-center">
               <img
-                src={require(`../../assets/images/alberta.png`)}
+                src={contributorAlberta}
                 alt="Alberta"
               />
             </a>
