@@ -47,7 +47,7 @@ const Apply: React.FC = () => {
           <Col xs={12}>
             <div className="apply__details">
               <h2 className="mt-4 mb-5 font-weight-bold">Are you eligible?</h2>
-              <p className="m-4"><span className="font-weight-bold">We do not give computers directly to individuals.</span> We are required to go through recognized and trusted organizations. Therefore, only eligible clients can apply for our computers.</p>
+              <p className="m-4"><span className="font-weight-bold">We do not give computers directly to individuals.</span> We are required to go through recognized and trusted organizations. Therefore, only eligible clients can apply for our computers. Individuals can apply through eligible clients.</p>
             </div>
           </Col>
         </Row>

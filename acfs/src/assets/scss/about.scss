@@ -1,0 +1,110 @@
+@import "main.scss";
+@import "variables.scss";
+@import "breakpoint.scss";
+
+.about {
+  .about__contents {
+    h1 {
+      font-size: 3rem;
+      font-weight: bolder;
+      color: $yellow;
+      margin-bottom: 1.6rem;
+    }
+
+    .about__who {
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+
+        span {
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .about__images {
+    background-color: $darkBlue;
+    color: $white;
+    margin-top: 5rem;
+    padding: 5rem 0;
+    position: relative;
+
+    img {
+      position: absolute;
+
+      &.about__images-1 {
+        top: -70px;
+        right: -90px;
+        max-height: 400px;
+        z-index: 10;
+      }
+
+      &.about__images-2 {
+        top: -70px;
+        right: 33rem;
+        max-height: 450px;
+      }
+    }
+
+    .about__difference {
+      margin-top: 10rem;
+      background-color: $darkBlue;
+      position: relative;
+
+      .row {
+        padding: 0 5rem;
+
+        .difference__title {
+          margin: 0 auto;
+  
+          h1 {
+            background-color: $darkBlue;
+            font-size: 3rem;
+            font-weight: bolder;
+            color: $white;
+            margin-bottom: 1.6rem;
+            padding-top: 2.5rem;
+            padding-right: 2rem;
+          }
+        }
+      }
+
+      .difference__contents {
+        margin-top: 2rem;
+        
+        p {
+          font-size: 1.1rem;
+          margin-bottom: 2rem;
+        }
+
+        img {
+          max-height: 400px;
+          right: -145px;
+        }
+      }
+    }
+  }
+
+  .about__team {
+    margin-top: 5rem;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bolder;
+      color: $yellow;
+      margin-bottom: 5rem;
+    }
+
+    h3 {
+      font-weight: bold;
+      color: $darkBlue;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
